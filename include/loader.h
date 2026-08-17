@@ -2,8 +2,10 @@
 #define INCLUDE_LOADER_H
 
 #include <string>
+#include <vector>
 #include <entt/entt.hpp>
 
 void LoadMonsters(entt::registry& registry, const std::string& filepath);
+entt::entity CreatePlayer(entt::registry& registry, const std::string& name, const std::string& raceId, const std::string& subraceId, const std::string& backgroundId, const std::vector<unsigned int>& baseStats, const std::string& racesFilepath, const std::string& subracesFilepath, const std::string& backgroundsFilepath);
 
 #endif

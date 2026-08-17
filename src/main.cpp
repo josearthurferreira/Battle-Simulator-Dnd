@@ -7,17 +7,31 @@
 int main() {
     entt::registry registry;
 
-    LoadMonsters(registry, "../data/monsters.json");
-
-    BattleManager battleManager(registry);
-
-    auto turnOrder = battleManager.GetTurnOrder();
+    std::vector<unsigned int> baseStats = {15, 14, 13, 12, 10, 8};
     
-    std::cout << "Ordem de Turnos Carregada:\n";
-    for (auto entity : turnOrder) {
-        auto& name = registry.get<NameComponent>(entity).name;
-        auto& combatState = registry.get<CombatStateComponent>(entity);
-        std::cout << "- " << name << " (HP: " << combatState.currentHP << ")\n";
+    entt::entity player = CreatePlayer(
+        registry, 
+        "Tharivol", 
+        "elf", 
+        "high-elf", 
+        "acolyte", 
+        baseStats, 
+        "../data/races.json", 
+        "../data/subraces.json", 
+        "../data/backgrounds.json"
+    );
+
+    auto& name = registry.get<NameComponent>(player).name;
+    auto& attrs = registry.get<AttributesComponent>(player);
+    
+    std::cout << "Personagem: " << name << "\n";
+    std::cout << "DEX base 14 + racial -> Final: " << attrs.stats[STAT_DEX] << "\n";
+    std::cout << "INT base 12 + subracial -> Final: " << attrs.stats[STAT_INT] << "\n\n";
+
+    auto& traits = registry.get<TraitsComponent>(player);
+    std::cout << "Tracos Adquiridos:\n";
+    for (const auto& t : traits.traits) {
+        std::cout << "- " << t << "\n";
     }
 
     return 0;

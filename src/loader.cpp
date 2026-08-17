@@ -32,3 +32,80 @@ void LoadMonsters(entt::registry& registry, const std::string& filepath) {
         }
     }
 }
+
+entt::entity CreatePlayer(entt::registry& registry, const std::string& name, const std::string& raceId, const std::string& subraceId, const std::string& backgroundId, const std::vector<unsigned int>& baseStats, const std::string& racesFilepath, const std::string& subracesFilepath, const std::string& backgroundsFilepath) {
+    auto entity = registry.create();
+    registry.emplace<NameComponent>(entity, name);
+
+    std::ifstream racesFile(racesFilepath);
+    json racesData = json::parse(racesFile);
+    
+    json selectedRace;
+    for (const auto& race : racesData) {
+        if (race["id"] == raceId) {
+            selectedRace = race;
+            break;
+        }
+    }
+
+    json selectedSubrace;
+    if (!subraceId.empty()) {
+        std::ifstream subracesFile(subracesFilepath);
+        if(subracesFile.is_open()) {
+            json subracesData = json::parse(subracesFile);
+            for (const auto& subrace : subracesData) {
+                if (subrace["id"] == subraceId) {
+                    selectedSubrace = subrace;
+                    break;
+                }
+            }
+        }
+    }
+
+    auto& attrs = registry.emplace<AttributesComponent>(entity);
+    auto raceBonuses = selectedRace["ability_bonuses"].get<std::vector<unsigned int>>();
+    
+    std::vector<unsigned int> subraceBonuses(STAT_TOTAL, 0);
+    if (!selectedSubrace.empty()) {
+        subraceBonuses = selectedSubrace["ability_bonuses"].get<std::vector<unsigned int>>();
+    }
+
+    for (int i = 0; i < STAT_TOTAL; ++i) {
+        attrs.stats[i] = baseStats[i] + raceBonuses[i] + subraceBonuses[i];
+    }
+
+    registry.emplace<SpeedComponent>(entity, selectedRace["speed"].get<int>());
+
+    auto& traits = registry.emplace<TraitsComponent>(entity);
+    traits.traits = selectedRace["traits"].get<std::vector<std::string>>();
+    
+    if (!selectedSubrace.empty()) {
+        auto subTraits = selectedSubrace["traits"].get<std::vector<std::string>>();
+        traits.traits.insert(traits.traits.end(), subTraits.begin(), subTraits.end());
+    }
+
+    auto& proficiencies = registry.emplace<ProficienciesComponent>(entity);
+    auto raceProfs = selectedRace["starting_proficiencies"].get<std::vector<std::string>>();
+    proficiencies.proficiencies.insert(proficiencies.proficiencies.end(), raceProfs.begin(), raceProfs.end());
+
+    if (!selectedSubrace.empty()) {
+        auto subProfs = selectedSubrace["starting_proficiencies"].get<std::vector<std::string>>();
+        proficiencies.proficiencies.insert(proficiencies.proficiencies.end(), subProfs.begin(), subProfs.end());
+    }
+
+    std::ifstream bgsFile(backgroundsFilepath);
+    json bgsData = json::parse(bgsFile);
+    
+    for (const auto& bg : bgsData) {
+        if (bg["id"] == backgroundId) {
+            auto bgProfs = bg["starting_proficiencies"].get<std::vector<std::string>>();
+            proficiencies.proficiencies.insert(proficiencies.proficiencies.end(), bgProfs.begin(), bgProfs.end());
+            break;
+        }
+    }
+
+    registry.emplace<PlayerProgressionComponent>(entity, 0u, std::unordered_map<std::string, int>());
+    registry.emplace<CombatStateComponent>(entity, 10, 10, 0);
+
+    return entity;
+}

@@ -4,6 +4,7 @@
 #include <string>
 #include <cstdint>
 #include <unordered_map>
+#include <vector>
 
 enum Stats : uint8_t { STAT_STR, STAT_DEX, STAT_CON, STAT_INT, STAT_WIS, STAT_CHA, STAT_TOTAL };
 
@@ -29,6 +30,18 @@ struct CombatStateComponent {
     int currentHP;
     int maxHP;
     int initiativeRoll;
+};
+
+struct SpeedComponent {
+    int speed;
+};
+
+struct TraitsComponent {
+    std::vector<std::string> traits;
+};
+
+struct ProficienciesComponent {
+    std::vector<std::string> proficiencies;
 };
 
 #endif
