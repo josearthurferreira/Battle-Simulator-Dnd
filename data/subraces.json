@@ -1,0 +1,73 @@
+[
+    {
+        "id": "high-elf",
+        "name": "High Elf",
+        "parent_race": "elf",
+        "ability_bonuses": [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0
+        ],
+        "starting_proficiencies": [],
+        "traits": [
+            "elf-weapon-training",
+            "high-elf-cantrip",
+            "extra-language"
+        ]
+    },
+    {
+        "id": "hill-dwarf",
+        "name": "Hill Dwarf",
+        "parent_race": "dwarf",
+        "ability_bonuses": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0
+        ],
+        "starting_proficiencies": [],
+        "traits": [
+            "dwarven-toughness"
+        ]
+    },
+    {
+        "id": "lightfoot-halfling",
+        "name": "Lightfoot Halfling",
+        "parent_race": "halfling",
+        "ability_bonuses": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+        ],
+        "starting_proficiencies": [],
+        "traits": [
+            "naturally-stealthy"
+        ]
+    },
+    {
+        "id": "rock-gnome",
+        "name": "Rock Gnome",
+        "parent_race": "gnome",
+        "ability_bonuses": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+        ],
+        "starting_proficiencies": [],
+        "traits": [
+            "artificers-lore",
+            "tinker"
+        ]
+    }
+]

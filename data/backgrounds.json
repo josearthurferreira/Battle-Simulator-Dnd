@@ -1,0 +1,10 @@
+[
+    {
+        "id": "acolyte",
+        "name": "Acolyte",
+        "starting_proficiencies": [
+            "skill-insight",
+            "skill-religion"
+        ]
+    }
+]

@@ -1,0 +1,172 @@
+[
+    {
+        "id": "dragonborn",
+        "name": "Dragonborn",
+        "speed": 30,
+        "ability_bonuses": [
+            2,
+            0,
+            0,
+            0,
+            0,
+            1
+        ],
+        "starting_proficiencies": [],
+        "traits": [
+            "draconic-ancestry",
+            "breath-weapon",
+            "damage-resistance"
+        ]
+    },
+    {
+        "id": "dwarf",
+        "name": "Dwarf",
+        "speed": 25,
+        "ability_bonuses": [
+            0,
+            0,
+            2,
+            0,
+            0,
+            0
+        ],
+        "starting_proficiencies": [],
+        "traits": [
+            "darkvision",
+            "dwarven-resilience",
+            "stonecunning",
+            "dwarven-combat-training",
+            "tool-proficiency"
+        ]
+    },
+    {
+        "id": "elf",
+        "name": "Elf",
+        "speed": 30,
+        "ability_bonuses": [
+            0,
+            2,
+            0,
+            0,
+            0,
+            0
+        ],
+        "starting_proficiencies": [],
+        "traits": [
+            "darkvision",
+            "fey-ancestry",
+            "trance",
+            "keen-senses"
+        ]
+    },
+    {
+        "id": "gnome",
+        "name": "Gnome",
+        "speed": 25,
+        "ability_bonuses": [
+            0,
+            0,
+            0,
+            2,
+            0,
+            0
+        ],
+        "starting_proficiencies": [],
+        "traits": [
+            "darkvision",
+            "gnome-cunning"
+        ]
+    },
+    {
+        "id": "half-elf",
+        "name": "Half-Elf",
+        "speed": 30,
+        "ability_bonuses": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            2
+        ],
+        "starting_proficiencies": [],
+        "traits": [
+            "darkvision",
+            "fey-ancestry",
+            "skill-versatility"
+        ]
+    },
+    {
+        "id": "half-orc",
+        "name": "Half-Orc",
+        "speed": 30,
+        "ability_bonuses": [
+            2,
+            0,
+            1,
+            0,
+            0,
+            0
+        ],
+        "starting_proficiencies": [],
+        "traits": [
+            "darkvision",
+            "savage-attacks",
+            "relentless-endurance",
+            "menacing"
+        ]
+    },
+    {
+        "id": "halfling",
+        "name": "Halfling",
+        "speed": 25,
+        "ability_bonuses": [
+            0,
+            2,
+            0,
+            0,
+            0,
+            0
+        ],
+        "starting_proficiencies": [],
+        "traits": [
+            "brave",
+            "halfling-nimbleness",
+            "lucky"
+        ]
+    },
+    {
+        "id": "human",
+        "name": "Human",
+        "speed": 30,
+        "ability_bonuses": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+        ],
+        "starting_proficiencies": [],
+        "traits": []
+    },
+    {
+        "id": "tiefling",
+        "name": "Tiefling",
+        "speed": 30,
+        "ability_bonuses": [
+            0,
+            0,
+            0,
+            1,
+            0,
+            2
+        ],
+        "starting_proficiencies": [],
+        "traits": [
+            "darkvision",
+            "hellish-resistance",
+            "infernal-legacy"
+        ]
+    }
+]
