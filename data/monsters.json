@@ -1,0 +1,10 @@
+[
+  {
+    "id": "goblin",
+    "name": "Goblin",
+    "species": "Humanoid",
+    "cr": 0.25,
+    "hp": 7,
+    "attributes": [8, 14, 10, 10, 8, 8]
+  }
+]
