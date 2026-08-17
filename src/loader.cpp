@@ -15,7 +15,7 @@ void LoadMonsters(entt::registry& registry, const std::string& filepath) {
         registry.emplace<NameComponent>(entity, item["name"].get<std::string>());
         
         registry.emplace<MonsterDataComponent>(entity, 
-            item["species"].get<std::string>(), 
+            item["type"].get<std::string>(), 
             item["cr"].get<float>()
         );
 
@@ -29,6 +29,17 @@ void LoadMonsters(entt::registry& registry, const std::string& filepath) {
         auto statsArray = item["attributes"].get<std::vector<unsigned int>>();
         for (int i = 0; i < STAT_TOTAL; ++i) {
             attrs.stats[i] = statsArray[i];
+        }
+
+        auto& actionsComp = registry.emplace<ActionsComponent>(entity);
+        for(const auto& act : item["actions"]) {
+            actionsComp.actions.push_back({act["name"].get<std::string>(), act["desc"].get<std::string>()});
+        }
+
+        auto spellsArray = item["spells"].get<std::vector<std::string>>();
+        if (!spellsArray.empty()) {
+            auto& spellbook = registry.emplace<SpellbookComponent>(entity);
+            spellbook.knownSpells = spellsArray;
         }
     }
 }

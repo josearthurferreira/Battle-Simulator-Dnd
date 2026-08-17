@@ -1,52 +1,36 @@
 #include <iostream>
-#include <fstream>
-#include <nlohmann/json.hpp>
 #include <entt/entt.hpp>
 #include "loader.h"
 #include "battle.h"
 #include "components.h"
 
-using json = nlohmann::json;
-
 int main() {
     entt::registry registry;
 
-    std::vector<unsigned int> baseStats = {15, 14, 13, 12, 10, 8};
+    LoadMonsters(registry, "../data/monsters.json");
+
+    auto view = registry.view<NameComponent, ActionsComponent>();
     
-    entt::entity player = CreatePlayer(
-        registry, 
-        "Tharivol", 
-        "elf", 
-        "high-elf", 
-        "acolyte", 
-        baseStats, 
-        "../data/races.json", 
-        "../data/subraces.json", 
-        "../data/backgrounds.json"
-    );
-
-    auto& spellbook = registry.emplace<SpellbookComponent>(player);
-    spellbook.knownSpells.push_back("magic-missile");
-    spellbook.knownSpells.push_back("fireball");
-
-    auto& name = registry.get<NameComponent>(player).name;
-    std::cout << "Grimorio de " << name << " contem:\n";
-
-    std::ifstream spellsFile("../data/spells.json");
-    json spellsData = json::parse(spellsFile);
-
-    for (const auto& spellId : spellbook.knownSpells) {
-        for (const auto& spell : spellsData) {
-            if (spell["id"] == spellId) {
-                std::cout << "- " << spell["name"].get<std::string>() 
-                          << " (Nivel " << spell["level"].get<int>() << ", Escola: " 
-                          << spell["school"].get<std::string>() << ")\n";
-                
-                if (spell.contains("damage_type")) {
-                    std::cout << "  Dano tipo: " << spell["damage_type"].get<std::string>() << "\n";
-                }
-                break;
+    for(auto entity : view) {
+        auto& name = view.get<NameComponent>(entity).name;
+        
+        if(name == "Lich") {
+            std::cout << "Monstro Encontrado: " << name << "\n";
+            
+            auto& actions = view.get<ActionsComponent>(entity).actions;
+            std::cout << "\nAcoes de Combate:\n";
+            for(const auto& act : actions) {
+                std::cout << "- " << act.name << "\n";
             }
+
+            if(registry.any_of<SpellbookComponent>(entity)) {
+                auto& spellbook = registry.get<SpellbookComponent>(entity);
+                std::cout << "\nFeiticos no Grimorio:\n";
+                for(const auto& spellId : spellbook.knownSpells) {
+                    std::cout << "- " << spellId << "\n";
+                }
+            }
+            break; 
         }
     }
 

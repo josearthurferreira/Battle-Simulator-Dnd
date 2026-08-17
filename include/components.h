@@ -22,7 +22,7 @@ struct PlayerProgressionComponent {
 };
 
 struct MonsterDataComponent {
-    std::string species;
+    std::string type;
     float challengeRating;
 };
 
@@ -46,6 +46,15 @@ struct ProficienciesComponent {
 
 struct SpellbookComponent {
     std::vector<std::string> knownSpells;
+};
+
+struct Action {
+    std::string name;
+    std::string description;
+};
+
+struct ActionsComponent {
+    std::vector<Action> actions;
 };
 
 #endif
