@@ -1,0 +1,3737 @@
+[
+    {
+        "id": "acid-arrow",
+        "name": "Acid Arrow",
+        "level": 2,
+        "school": "evocation",
+        "casting_time": "1 action",
+        "range": "90 feet",
+        "duration": "Instantaneous",
+        "requires_concentration": false,
+        "damage_type": "acid",
+        "damage_slots": {
+            "2": "4d4",
+            "3": "5d4",
+            "4": "6d4",
+            "5": "7d4",
+            "6": "8d4",
+            "7": "9d4",
+            "8": "10d4",
+            "9": "11d4"
+        }
+    },
+    {
+        "id": "acid-splash",
+        "name": "Acid Splash",
+        "level": 0,
+        "school": "conjuration",
+        "casting_time": "1 action",
+        "range": "60 feet",
+        "duration": "Instantaneous",
+        "requires_concentration": false,
+        "damage_type": "acid",
+        "damage_character_levels": {
+            "1": "1d6",
+            "5": "2d6",
+            "11": "3d6",
+            "17": "4d6"
+        },
+        "save_type": "dex"
+    },
+    {
+        "id": "aid",
+        "name": "Aid",
+        "level": 2,
+        "school": "abjuration",
+        "casting_time": "1 action",
+        "range": "30 feet",
+        "duration": "8 hours",
+        "requires_concentration": false
+    },
+    {
+        "id": "alarm",
+        "name": "Alarm",
+        "level": 1,
+        "school": "abjuration",
+        "casting_time": "1 minute",
+        "range": "30 feet",
+        "duration": "8 hours",
+        "requires_concentration": false
+    },
+    {
+        "id": "alter-self",
+        "name": "Alter Self",
+        "level": 2,
+        "school": "transmutation",
+        "casting_time": "1 action",
+        "range": "Self",
+        "duration": "Up to 1 hour",
+        "requires_concentration": true
+    },
+    {
+        "id": "animal-friendship",
+        "name": "Animal Friendship",
+        "level": 1,
+        "school": "enchantment",
+        "casting_time": "1 action",
+        "range": "30 feet",
+        "duration": "24 hours",
+        "requires_concentration": false,
+        "save_type": "wis"
+    },
+    {
+        "id": "animal-messenger",
+        "name": "Animal Messenger",
+        "level": 2,
+        "school": "enchantment",
+        "casting_time": "1 action",
+        "range": "30 feet",
+        "duration": "24 hours",
+        "requires_concentration": false
+    },
+    {
+        "id": "animal-shapes",
+        "name": "Animal Shapes",
+        "level": 8,
+        "school": "transmutation",
+        "casting_time": "1 action",
+        "range": "30 feet",
+        "duration": "Up to 24 hours",
+        "requires_concentration": true
+    },
+    {
+        "id": "animate-dead",
+        "name": "Animate Dead",
+        "level": 3,
+        "school": "necromancy",
+        "casting_time": "1 minute",
+        "range": "10 feet",
+        "duration": "Instantaneous",
+        "requires_concentration": false
+    },
+    {
+        "id": "animate-objects",
+        "name": "Animate Objects",
+        "level": 5,
+        "school": "transmutation",
+        "casting_time": "1 action",
+        "range": "120 feet",
+        "duration": "Up to 1 minute",
+        "requires_concentration": true
+    },
+    {
+        "id": "antilife-shell",
+        "name": "Antilife Shell",
+        "level": 5,
+        "school": "abjuration",
+        "casting_time": "1 action",
+        "range": "Self",
+        "duration": "Up to 1 hour",
+        "requires_concentration": true
+    },
+    {
+        "id": "antimagic-field",
+        "name": "Antimagic Field",
+        "level": 8,
+        "school": "abjuration",
+        "casting_time": "1 action",
+        "range": "Self",
+        "duration": "Up to 1 hour",
+        "requires_concentration": true
+    },
+    {
+        "id": "antipathy-sympathy",
+        "name": "Antipathy/Sympathy",
+        "level": 8,
+        "school": "enchantment",
+        "casting_time": "1 hour",
+        "range": "60 feet",
+        "duration": "10 days",
+        "requires_concentration": false
+    },
+    {
+        "id": "arcane-eye",
+        "name": "Arcane Eye",
+        "level": 4,
+        "school": "divination",
+        "casting_time": "1 action",
+        "range": "30 feet",
+        "duration": "Up to 1 hour",
+        "requires_concentration": true
+    },
+    {
+        "id": "arcane-hand",
+        "name": "Arcane Hand",
+        "level": 5,
+        "school": "evocation",
+        "casting_time": "1 action",
+        "range": "120 feet",
+        "duration": "Up to 1 minute",
+        "requires_concentration": true
+    },
+    {
+        "id": "arcane-lock",
+        "name": "Arcane Lock",
+        "level": 2,
+        "school": "abjuration",
+        "casting_time": "1 action",
+        "range": "Touch",
+        "duration": "Until dispelled",
+        "requires_concentration": false
+    },
+    {
+        "id": "arcane-sword",
+        "name": "Arcane Sword",
+        "level": 7,
+        "school": "evocation",
+        "casting_time": "1 action",
+        "range": "60 feet",
+        "duration": "Up to 1 minute",
+        "requires_concentration": true,
+        "damage_type": "force",
+        "damage_slots": {
+            "7": "3d10"
+        }
+    },
+    {
+        "id": "arcanists-magic-aura",
+        "name": "Arcanist's Magic Aura",
+        "level": 2,
+        "school": "illusion",
+        "casting_time": "1 action",
+        "range": "Touch",
+        "duration": "24 hours",
+        "requires_concentration": false
+    },
+    {
+        "id": "astral-projection",
+        "name": "Astral Projection",
+        "level": 9,
+        "school": "necromancy",
+        "casting_time": "1 hour",
+        "range": "10 feet",
+        "duration": "Special",
+        "requires_concentration": false
+    },
+    {
+        "id": "augury",
+        "name": "Augury",
+        "level": 2,
+        "school": "divination",
+        "casting_time": "1 minute",
+        "range": "Self",
+        "duration": "Instantaneous",
+        "requires_concentration": false
+    },
+    {
+        "id": "awaken",
+        "name": "Awaken",
+        "level": 5,
+        "school": "transmutation",
+        "casting_time": "8 hours",
+        "range": "Touch",
+        "duration": "Instantaneous",
+        "requires_concentration": false
+    },
+    {
+        "id": "bane",
+        "name": "Bane",
+        "level": 1,
+        "school": "enchantment",
+        "casting_time": "1 action",
+        "range": "30 feet",
+        "duration": "Up to 1 minute",
+        "requires_concentration": true,
+        "save_type": "cha"
+    },
+    {
+        "id": "banishment",
+        "name": "Banishment",
+        "level": 4,
+        "school": "abjuration",
+        "casting_time": "1 action",
+        "range": "60 feet",
+        "duration": "Up to 1 minute",
+        "requires_concentration": true,
+        "save_type": "cha"
+    },
+    {
+        "id": "barkskin",
+        "name": "Barkskin",
+        "level": 2,
+        "school": "transmutation",
+        "casting_time": "1 action",
+        "range": "Touch",
+        "duration": "Up to 1 hour",
+        "requires_concentration": true
+    },
+    {
+        "id": "beacon-of-hope",
+        "name": "Beacon of Hope",
+        "level": 3,
+        "school": "abjuration",
+        "casting_time": "1 action",
+        "range": "30 feet",
+        "duration": "Up to 1 minute",
+        "requires_concentration": true
+    },
+    {
+        "id": "bestow-curse",
+        "name": "Bestow Curse",
+        "level": 3,
+        "school": "necromancy",
+        "casting_time": "1 action",
+        "range": "Touch",
+        "duration": "Up to 1 minute",
+        "requires_concentration": true,
+        "save_type": "wis"
+    },
+    {
+        "id": "black-tentacles",
+        "name": "Black Tentacles",
+        "level": 4,
+        "school": "conjuration",
+        "casting_time": "1 action",
+        "range": "90 feet",
+        "duration": "Up to 1 minute",
+        "requires_concentration": true,
+        "damage_type": "bludgeoning",
+        "damage_slots": {
+            "4": "3d6"
+        },
+        "save_type": "dex"
+    },
+    {
+        "id": "blade-barrier",
+        "name": "Blade Barrier",
+        "level": 6,
+        "school": "evocation",
+        "casting_time": "1 action",
+        "range": "90 feet",
+        "duration": "Up to 10 minutes",
+        "requires_concentration": true,
+        "damage_type": "slashing",
+        "damage_slots": {
+            "6": "6d10"
+        },
+        "save_type": "dex"
+    },
+    {
+        "id": "bless",
+        "name": "Bless",
+        "level": 1,
+        "school": "enchantment",
+        "casting_time": "1 action",
+        "range": "30 feet",
+        "duration": "Up to 1 minute",
+        "requires_concentration": true
+    },
+    {
+        "id": "blight",
+        "name": "Blight",
+        "level": 4,
+        "school": "necromancy",
+        "casting_time": "1 action",
+        "range": "30 feet",
+        "duration": "Instantaneous",
+        "requires_concentration": false,
+        "damage_type": "necrotic",
+        "damage_slots": {
+            "4": "8d8",
+            "5": "9d8",
+            "6": "10d8",
+            "7": "11d8",
+            "8": "12d8",
+            "9": "13d8"
+        },
+        "save_type": "con"
+    },
+    {
+        "id": "blindness-deafness",
+        "name": "Blindness/Deafness",
+        "level": 2,
+        "school": "necromancy",
+        "casting_time": "1 action",
+        "range": "30 feet",
+        "duration": "1 minute",
+        "requires_concentration": false,
+        "save_type": "con"
+    },
+    {
+        "id": "blink",
+        "name": "Blink",
+        "level": 3,
+        "school": "transmutation",
+        "casting_time": "1 action",
+        "range": "Self",
+        "duration": "1 minute",
+        "requires_concentration": false
+    },
+    {
+        "id": "blur",
+        "name": "Blur",
+        "level": 2,
+        "school": "illusion",
+        "casting_time": "1 action",
+        "range": "Self",
+        "duration": "Up to 1 minute",
+        "requires_concentration": true
+    },
+    {
+        "id": "branding-smite",
+        "name": "Branding Smite",
+        "level": 2,
+        "school": "evocation",
+        "casting_time": "1 bonus action",
+        "range": "Self",
+        "duration": "Up to 1 minute",
+        "requires_concentration": true,
+        "damage_type": "radiant",
+        "damage_slots": {
+            "2": "2d6",
+            "3": "3d6",
+            "4": "4d6",
+            "5": "5d6",
+            "6": "6d6",
+            "7": "7d6",
+            "8": "8d6",
+            "9": "9d6"
+        }
+    },
+    {
+        "id": "burning-hands",
+        "name": "Burning Hands",
+        "level": 1,
+        "school": "evocation",
+        "casting_time": "1 action",
+        "range": "Self",
+        "duration": "Instantaneous",
+        "requires_concentration": false,
+        "damage_type": "fire",
+        "damage_slots": {
+            "1": "3d6",
+            "2": "4d6",
+            "3": "5d6",
+            "4": "6d6",
+            "5": "7d6",
+            "6": "8d6",
+            "7": "9d6",
+            "8": "10d6",
+            "9": "11d6"
+        },
+        "save_type": "dex"
+    },
+    {
+        "id": "call-lightning",
+        "name": "Call Lightning",
+        "level": 3,
+        "school": "conjuration",
+        "casting_time": "1 action",
+        "range": "120 feet",
+        "duration": "Up to 10 minutes",
+        "requires_concentration": true,
+        "damage_type": "lightning",
+        "damage_slots": {
+            "3": "3d10",
+            "4": "4d10",
+            "5": "5d10",
+            "6": "6d10",
+            "7": "7d10",
+            "8": "8d10",
+            "9": "9d10"
+        }
+    },
+    {
+        "id": "calm-emotions",
+        "name": "Calm Emotions",
+        "level": 2,
+        "school": "enchantment",
+        "casting_time": "1 action",
+        "range": "60 feet",
+        "duration": "Up to 1 minute",
+        "requires_concentration": true,
+        "save_type": "cha"
+    },
+    {
+        "id": "chain-lightning",
+        "name": "Chain Lightning",
+        "level": 6,
+        "school": "evocation",
+        "casting_time": "1 action",
+        "range": "150 feet",
+        "duration": "Instantaneous",
+        "requires_concentration": false,
+        "damage_type": "lightning",
+        "damage_slots": {
+            "6": "10d8"
+        },
+        "save_type": "dex"
+    },
+    {
+        "id": "charm-person",
+        "name": "Charm Person",
+        "level": 1,
+        "school": "enchantment",
+        "casting_time": "1 action",
+        "range": "30 feet",
+        "duration": "1 hour",
+        "requires_concentration": false,
+        "save_type": "wis"
+    },
+    {
+        "id": "chill-touch",
+        "name": "Chill Touch",
+        "level": 0,
+        "school": "necromancy",
+        "casting_time": "1 action",
+        "range": "120 feet",
+        "duration": "1 round",
+        "requires_concentration": false,
+        "damage_type": "necrotic",
+        "damage_character_levels": {
+            "1": "1d8",
+            "5": "2d8",
+            "11": "3d8",
+            "17": "4d8"
+        }
+    },
+    {
+        "id": "circle-of-death",
+        "name": "Circle of Death",
+        "level": 6,
+        "school": "necromancy",
+        "casting_time": "1 action",
+        "range": "150 feet",
+        "duration": "Instantaneous",
+        "requires_concentration": false,
+        "damage_type": "necrotic",
+        "damage_slots": {
+            "6": "8d6",
+            "7": "10d6",
+            "8": "12d6",
+            "9": "14d6"
+        },
+        "save_type": "con"
+    },
+    {
+        "id": "clairvoyance",
+        "name": "Clairvoyance",
+        "level": 3,
+        "school": "divination",
+        "casting_time": "10 minutes",
+        "range": "1 mile",
+        "duration": "Up to 10 minutes",
+        "requires_concentration": true
+    },
+    {
+        "id": "clone",
+        "name": "Clone",
+        "level": 8,
+        "school": "necromancy",
+        "casting_time": "1 hour",
+        "range": "Touch",
+        "duration": "Instantaneous",
+        "requires_concentration": false
+    },
+    {
+        "id": "cloudkill",
+        "name": "Cloudkill",
+        "level": 5,
+        "school": "conjuration",
+        "casting_time": "1 action",
+        "range": "120 feet",
+        "duration": "Up to 10 minutes",
+        "requires_concentration": true,
+        "damage_type": "poison",
+        "damage_slots": {
+            "5": "5d8",
+            "6": "6d8",
+            "7": "7d8",
+            "8": "8d8",
+            "9": "9d8"
+        },
+        "save_type": "con"
+    },
+    {
+        "id": "color-spray",
+        "name": "Color Spray",
+        "level": 1,
+        "school": "illusion",
+        "casting_time": "1 action",
+        "range": "Self",
+        "duration": "1 round",
+        "requires_concentration": false
+    },
+    {
+        "id": "command",
+        "name": "Command",
+        "level": 1,
+        "school": "enchantment",
+        "casting_time": "1 action",
+        "range": "60 feet",
+        "duration": "1 round",
+        "requires_concentration": false,
+        "save_type": "wis"
+    },
+    {
+        "id": "commune",
+        "name": "Commune",
+        "level": 5,
+        "school": "divination",
+        "casting_time": "1 minute",
+        "range": "Self",
+        "duration": "1 minute",
+        "requires_concentration": false
+    },
+    {
+        "id": "commune-with-nature",
+        "name": "Commune With Nature",
+        "level": 5,
+        "school": "divination",
+        "casting_time": "1 minute",
+        "range": "Self",
+        "duration": "Instantaneous",
+        "requires_concentration": false
+    },
+    {
+        "id": "comprehend-languages",
+        "name": "Comprehend Languages",
+        "level": 1,
+        "school": "divination",
+        "casting_time": "1 action",
+        "range": "Self",
+        "duration": "1 hour",
+        "requires_concentration": false
+    },
+    {
+        "id": "compulsion",
+        "name": "Compulsion",
+        "level": 4,
+        "school": "enchantment",
+        "casting_time": "1 action",
+        "range": "30 feet",
+        "duration": "Up to 1 minute",
+        "requires_concentration": true,
+        "save_type": "wis"
+    },
+    {
+        "id": "cone-of-cold",
+        "name": "Cone of Cold",
+        "level": 5,
+        "school": "evocation",
+        "casting_time": "1 action",
+        "range": "Self",
+        "duration": "Instantaneous",
+        "requires_concentration": false,
+        "damage_type": "cold",
+        "damage_slots": {
+            "5": "8d8",
+            "6": "9d8",
+            "7": "10d8",
+            "8": "11d8",
+            "9": "12d8"
+        },
+        "save_type": "con"
+    },
+    {
+        "id": "confusion",
+        "name": "Confusion",
+        "level": 4,
+        "school": "enchantment",
+        "casting_time": "1 action",
+        "range": "90 feet",
+        "duration": "Up to 1 minute",
+        "requires_concentration": true,
+        "save_type": "wis"
+    },
+    {
+        "id": "conjure-animals",
+        "name": "Conjure Animals",
+        "level": 3,
+        "school": "conjuration",
+        "casting_time": "1 action",
+        "range": "60 feet",
+        "duration": "Up to 1 hour",
+        "requires_concentration": true
+    },
+    {
+        "id": "conjure-celestial",
+        "name": "Conjure Celestial",
+        "level": 7,
+        "school": "conjuration",
+        "casting_time": "1 minute",
+        "range": "90 feet",
+        "duration": "Up to 1 hour",
+        "requires_concentration": true
+    },
+    {
+        "id": "conjure-elemental",
+        "name": "Conjure Elemental",
+        "level": 5,
+        "school": "conjuration",
+        "casting_time": "1 minute",
+        "range": "90 feet",
+        "duration": "Up to 1 hour",
+        "requires_concentration": true
+    },
+    {
+        "id": "conjure-fey",
+        "name": "Conjure Fey",
+        "level": 6,
+        "school": "conjuration",
+        "casting_time": "1 minute",
+        "range": "90 feet",
+        "duration": "Up to 1 hour",
+        "requires_concentration": true
+    },
+    {
+        "id": "conjure-minor-elementals",
+        "name": "Conjure Minor Elementals",
+        "level": 4,
+        "school": "conjuration",
+        "casting_time": "1 minute",
+        "range": "90 feet",
+        "duration": "Up to 1 hour",
+        "requires_concentration": true
+    },
+    {
+        "id": "conjure-woodland-beings",
+        "name": "Conjure Woodland Beings",
+        "level": 4,
+        "school": "conjuration",
+        "casting_time": "1 action",
+        "range": "60 feet",
+        "duration": "Up to 1 hour",
+        "requires_concentration": true
+    },
+    {
+        "id": "contact-other-plane",
+        "name": "Contact Other Plane",
+        "level": 5,
+        "school": "divination",
+        "casting_time": "1 minute",
+        "range": "Self",
+        "duration": "1 minute",
+        "requires_concentration": false,
+        "save_type": "int"
+    },
+    {
+        "id": "contagion",
+        "name": "Contagion",
+        "level": 5,
+        "school": "necromancy",
+        "casting_time": "1 action",
+        "range": "Touch",
+        "duration": "7 days",
+        "requires_concentration": false,
+        "save_type": "con"
+    },
+    {
+        "id": "contingency",
+        "name": "Contingency",
+        "level": 6,
+        "school": "evocation",
+        "casting_time": "10 minutes",
+        "range": "Self",
+        "duration": "10 days",
+        "requires_concentration": false
+    },
+    {
+        "id": "continual-flame",
+        "name": "Continual Flame",
+        "level": 2,
+        "school": "evocation",
+        "casting_time": "1 action",
+        "range": "Touch",
+        "duration": "Until dispelled",
+        "requires_concentration": false
+    },
+    {
+        "id": "control-water",
+        "name": "Control Water",
+        "level": 4,
+        "school": "transmutation",
+        "casting_time": "1 action",
+        "range": "300 feet",
+        "duration": "Up to 10 minutes",
+        "requires_concentration": true,
+        "damage_type": "bludgeoning",
+        "damage_slots": {
+            "4": "2d8"
+        },
+        "save_type": "str"
+    },
+    {
+        "id": "control-weather",
+        "name": "Control Weather",
+        "level": 8,
+        "school": "transmutation",
+        "casting_time": "10 minutes",
+        "range": "Self",
+        "duration": "Up to 8 hours",
+        "requires_concentration": true
+    },
+    {
+        "id": "counterspell",
+        "name": "Counterspell",
+        "level": 3,
+        "school": "abjuration",
+        "casting_time": "1 reaction",
+        "range": "60 feet",
+        "duration": "Instantaneous",
+        "requires_concentration": false
+    },
+    {
+        "id": "create-food-and-water",
+        "name": "Create Food and Water",
+        "level": 3,
+        "school": "conjuration",
+        "casting_time": "1 action",
+        "range": "30 feet",
+        "duration": "Instantaneous",
+        "requires_concentration": false
+    },
+    {
+        "id": "create-or-destroy-water",
+        "name": "Create or Destroy Water",
+        "level": 1,
+        "school": "transmutation",
+        "casting_time": "1 action",
+        "range": "30 feet",
+        "duration": "Instantaneous",
+        "requires_concentration": false
+    },
+    {
+        "id": "create-undead",
+        "name": "Create Undead",
+        "level": 6,
+        "school": "necromancy",
+        "casting_time": "1 minute",
+        "range": "10 feet",
+        "duration": "Instantaneous",
+        "requires_concentration": false
+    },
+    {
+        "id": "creation",
+        "name": "Creation",
+        "level": 5,
+        "school": "illusion",
+        "casting_time": "1 minute",
+        "range": "30 feet",
+        "duration": "Special",
+        "requires_concentration": false
+    },
+    {
+        "id": "cure-wounds",
+        "name": "Cure Wounds",
+        "level": 1,
+        "school": "evocation",
+        "casting_time": "1 action",
+        "range": "Touch",
+        "duration": "Instantaneous",
+        "requires_concentration": false
+    },
+    {
+        "id": "dancing-lights",
+        "name": "Dancing Lights",
+        "level": 0,
+        "school": "evocation",
+        "casting_time": "1 action",
+        "range": "120 feet",
+        "duration": "Up to 1 minute",
+        "requires_concentration": true
+    },
+    {
+        "id": "darkness",
+        "name": "Darkness",
+        "level": 2,
+        "school": "evocation",
+        "casting_time": "1 action",
+        "range": "60 feet",
+        "duration": "Up to 10 minutes",
+        "requires_concentration": true
+    },
+    {
+        "id": "darkvision",
+        "name": "Darkvision",
+        "level": 2,
+        "school": "transmutation",
+        "casting_time": "1 action",
+        "range": "Touch",
+        "duration": "8 hours",
+        "requires_concentration": false
+    },
+    {
+        "id": "daylight",
+        "name": "Daylight",
+        "level": 3,
+        "school": "evocation",
+        "casting_time": "1 action",
+        "range": "60 feet",
+        "duration": "1 hour",
+        "requires_concentration": false
+    },
+    {
+        "id": "death-ward",
+        "name": "Death Ward",
+        "level": 4,
+        "school": "abjuration",
+        "casting_time": "1 action",
+        "range": "Touch",
+        "duration": "8 hours",
+        "requires_concentration": false
+    },
+    {
+        "id": "delayed-blast-fireball",
+        "name": "Delayed Blast Fireball",
+        "level": 7,
+        "school": "evocation",
+        "casting_time": "1 action",
+        "range": "150 feet",
+        "duration": "Up to 1 minute",
+        "requires_concentration": true,
+        "damage_type": "fire",
+        "damage_slots": {
+            "7": "12d6",
+            "8": "13d6",
+            "9": "14d6"
+        },
+        "save_type": "dex"
+    },
+    {
+        "id": "demiplane",
+        "name": "Demiplane",
+        "level": 8,
+        "school": "conjuration",
+        "casting_time": "1 action",
+        "range": "60 feet",
+        "duration": "1 hour",
+        "requires_concentration": false
+    },
+    {
+        "id": "detect-evil-and-good",
+        "name": "Detect Evil and Good",
+        "level": 1,
+        "school": "divination",
+        "casting_time": "1 action",
+        "range": "Self",
+        "duration": "Up to 10 minutes",
+        "requires_concentration": true
+    },
+    {
+        "id": "detect-magic",
+        "name": "Detect Magic",
+        "level": 1,
+        "school": "divination",
+        "casting_time": "1 action",
+        "range": "Self",
+        "duration": "Up to 10 minutes",
+        "requires_concentration": true
+    },
+    {
+        "id": "detect-poison-and-disease",
+        "name": "Detect Poison and Disease",
+        "level": 1,
+        "school": "divination",
+        "casting_time": "1 action",
+        "range": "Self",
+        "duration": "Up to 10 minutes",
+        "requires_concentration": true
+    },
+    {
+        "id": "detect-thoughts",
+        "name": "Detect Thoughts",
+        "level": 2,
+        "school": "divination",
+        "casting_time": "1 action",
+        "range": "Self",
+        "duration": "Up to 1 minute",
+        "requires_concentration": true
+    },
+    {
+        "id": "dimension-door",
+        "name": "Dimension Door",
+        "level": 4,
+        "school": "conjuration",
+        "casting_time": "1 action",
+        "range": "500 feet",
+        "duration": "Instantaneous",
+        "requires_concentration": false,
+        "damage_type": "force",
+        "damage_slots": {
+            "4": "4d6"
+        }
+    },
+    {
+        "id": "disguise-self",
+        "name": "Disguise Self",
+        "level": 1,
+        "school": "illusion",
+        "casting_time": "1 action",
+        "range": "Self",
+        "duration": "1 hour",
+        "requires_concentration": false
+    },
+    {
+        "id": "disintegrate",
+        "name": "Disintegrate",
+        "level": 6,
+        "school": "transmutation",
+        "casting_time": "1 action",
+        "range": "60 feet",
+        "duration": "Instantaneous",
+        "requires_concentration": false,
+        "damage_type": "force",
+        "damage_slots": {
+            "6": "10d6 + 40"
+        },
+        "save_type": "dex"
+    },
+    {
+        "id": "dispel-evil-and-good",
+        "name": "Dispel Evil and Good",
+        "level": 5,
+        "school": "abjuration",
+        "casting_time": "1 action",
+        "range": "Self",
+        "duration": "Up to 1 minute",
+        "requires_concentration": true,
+        "save_type": "cha"
+    },
+    {
+        "id": "dispel-magic",
+        "name": "Dispel Magic",
+        "level": 3,
+        "school": "abjuration",
+        "casting_time": "1 action",
+        "range": "120 feet",
+        "duration": "Instantaneous",
+        "requires_concentration": false
+    },
+    {
+        "id": "divination",
+        "name": "Divination",
+        "level": 4,
+        "school": "divination",
+        "casting_time": "1 action",
+        "range": "Self",
+        "duration": "Instantaneous",
+        "requires_concentration": false
+    },
+    {
+        "id": "divine-favor",
+        "name": "Divine Favor",
+        "level": 1,
+        "school": "evocation",
+        "casting_time": "1 bonus action",
+        "range": "Self",
+        "duration": "Up to 1 minute",
+        "requires_concentration": true,
+        "damage_type": "radiant",
+        "damage_slots": {
+            "1": "1d4"
+        }
+    },
+    {
+        "id": "divine-word",
+        "name": "Divine Word",
+        "level": 7,
+        "school": "evocation",
+        "casting_time": "1 bonus action",
+        "range": "30 feet",
+        "duration": "Instantaneous",
+        "requires_concentration": false,
+        "save_type": "cha"
+    },
+    {
+        "id": "dominate-beast",
+        "name": "Dominate Beast",
+        "level": 4,
+        "school": "enchantment",
+        "casting_time": "1 action",
+        "range": "60 feet",
+        "duration": "Up to 1 minute",
+        "requires_concentration": true,
+        "save_type": "wis"
+    },
+    {
+        "id": "dominate-monster",
+        "name": "Dominate Monster",
+        "level": 8,
+        "school": "enchantment",
+        "casting_time": "1 action",
+        "range": "60 feet",
+        "duration": "Up to 1 hour",
+        "requires_concentration": true,
+        "save_type": "wis"
+    },
+    {
+        "id": "dominate-person",
+        "name": "Dominate Person",
+        "level": 5,
+        "school": "enchantment",
+        "casting_time": "1 action",
+        "range": "60 feet",
+        "duration": "Up to 1 minute",
+        "requires_concentration": true,
+        "save_type": "wis"
+    },
+    {
+        "id": "dream",
+        "name": "Dream",
+        "level": 5,
+        "school": "illusion",
+        "casting_time": "1 minute",
+        "range": "Special",
+        "duration": "8 hours",
+        "requires_concentration": false,
+        "damage_type": "psychic",
+        "damage_slots": {
+            "5": "3d6"
+        },
+        "save_type": "wis"
+    },
+    {
+        "id": "druidcraft",
+        "name": "Druidcraft",
+        "level": 0,
+        "school": "transmutation",
+        "casting_time": "1 action",
+        "range": "30 feet",
+        "duration": "Instantaneous",
+        "requires_concentration": false
+    },
+    {
+        "id": "earthquake",
+        "name": "Earthquake",
+        "level": 8,
+        "school": "evocation",
+        "casting_time": "1 action",
+        "range": "500 feet",
+        "duration": "Up to 1 minute",
+        "requires_concentration": true
+    },
+    {
+        "id": "eldritch-blast",
+        "name": "Eldritch Blast",
+        "level": 0,
+        "school": "evocation",
+        "casting_time": "1 action",
+        "range": "120 feet",
+        "duration": "Instantaneous",
+        "requires_concentration": false,
+        "damage_type": "force",
+        "damage_character_levels": {
+            "1": "1d10",
+            "5": "1d10",
+            "11": "1d10",
+            "17": "1d10"
+        }
+    },
+    {
+        "id": "enhance-ability",
+        "name": "Enhance Ability",
+        "level": 2,
+        "school": "transmutation",
+        "casting_time": "1 action",
+        "range": "Touch",
+        "duration": "Up to 1 hour",
+        "requires_concentration": true
+    },
+    {
+        "id": "enlarge-reduce",
+        "name": "Enlarge/Reduce",
+        "level": 2,
+        "school": "transmutation",
+        "casting_time": "1 action",
+        "range": "30 feet",
+        "duration": "Up to 1 minute",
+        "requires_concentration": true,
+        "save_type": "con"
+    },
+    {
+        "id": "entangle",
+        "name": "Entangle",
+        "level": 1,
+        "school": "conjuration",
+        "casting_time": "1 action",
+        "range": "90 feet",
+        "duration": "Up to 1 minute",
+        "requires_concentration": true,
+        "save_type": "str"
+    },
+    {
+        "id": "enthrall",
+        "name": "Enthrall",
+        "level": 2,
+        "school": "enchantment",
+        "casting_time": "1 action",
+        "range": "60 feet",
+        "duration": "1 minute",
+        "requires_concentration": false,
+        "save_type": "wis"
+    },
+    {
+        "id": "etherealness",
+        "name": "Etherealness",
+        "level": 7,
+        "school": "transmutation",
+        "casting_time": "1 action",
+        "range": "Self",
+        "duration": "8 hours",
+        "requires_concentration": false
+    },
+    {
+        "id": "expeditious-retreat",
+        "name": "Expeditious Retreat",
+        "level": 1,
+        "school": "transmutation",
+        "casting_time": "1 bonus action",
+        "range": "Self",
+        "duration": "Up to 10 minutes",
+        "requires_concentration": true
+    },
+    {
+        "id": "eyebite",
+        "name": "Eyebite",
+        "level": 6,
+        "school": "necromancy",
+        "casting_time": "1 action",
+        "range": "Self",
+        "duration": "Up to 1 minute",
+        "requires_concentration": true,
+        "save_type": "wis"
+    },
+    {
+        "id": "fabricate",
+        "name": "Fabricate",
+        "level": 4,
+        "school": "transmutation",
+        "casting_time": "10 minutes",
+        "range": "120 feet",
+        "duration": "Instantaneous",
+        "requires_concentration": false
+    },
+    {
+        "id": "faerie-fire",
+        "name": "Faerie Fire",
+        "level": 1,
+        "school": "evocation",
+        "casting_time": "1 action",
+        "range": "60 feet",
+        "duration": "Up to 1 minute",
+        "requires_concentration": true,
+        "save_type": "dex"
+    },
+    {
+        "id": "faithful-hound",
+        "name": "Faithful Hound",
+        "level": 4,
+        "school": "conjuration",
+        "casting_time": "1 action",
+        "range": "30 feet",
+        "duration": "8 hours",
+        "requires_concentration": false,
+        "damage_type": "piercing",
+        "damage_slots": {
+            "4": "4d8"
+        }
+    },
+    {
+        "id": "false-life",
+        "name": "False Life",
+        "level": 1,
+        "school": "necromancy",
+        "casting_time": "1 action",
+        "range": "Self",
+        "duration": "1 hour",
+        "requires_concentration": false
+    },
+    {
+        "id": "fear",
+        "name": "Fear",
+        "level": 3,
+        "school": "illusion",
+        "casting_time": "1 action",
+        "range": "Self",
+        "duration": "Up to 1 minute",
+        "requires_concentration": true,
+        "save_type": "wis"
+    },
+    {
+        "id": "feather-fall",
+        "name": "Feather Fall",
+        "level": 1,
+        "school": "transmutation",
+        "casting_time": "1 reaction",
+        "range": "60 feet",
+        "duration": "1 minute",
+        "requires_concentration": false
+    },
+    {
+        "id": "feeblemind",
+        "name": "Feeblemind",
+        "level": 8,
+        "school": "enchantment",
+        "casting_time": "1 action",
+        "range": "150 feet",
+        "duration": "Instantaneous",
+        "requires_concentration": false,
+        "damage_type": "psychic",
+        "damage_slots": {
+            "8": "4d6"
+        },
+        "save_type": "int"
+    },
+    {
+        "id": "find-familiar",
+        "name": "Find Familiar",
+        "level": 1,
+        "school": "conjuration",
+        "casting_time": "1 hour",
+        "range": "10 feet",
+        "duration": "Instantaneous",
+        "requires_concentration": false
+    },
+    {
+        "id": "find-steed",
+        "name": "Find Steed",
+        "level": 2,
+        "school": "conjuration",
+        "casting_time": "10 minutes",
+        "range": "30 feet",
+        "duration": "Instantaneous",
+        "requires_concentration": false
+    },
+    {
+        "id": "find-the-path",
+        "name": "Find the Path",
+        "level": 6,
+        "school": "divination",
+        "casting_time": "1 minute",
+        "range": "Self",
+        "duration": "Up to 24 hours",
+        "requires_concentration": true
+    },
+    {
+        "id": "find-traps",
+        "name": "Find Traps",
+        "level": 2,
+        "school": "divination",
+        "casting_time": "1 action",
+        "range": "120 feet",
+        "duration": "Instantaneous",
+        "requires_concentration": false
+    },
+    {
+        "id": "finger-of-death",
+        "name": "Finger of Death",
+        "level": 7,
+        "school": "necromancy",
+        "casting_time": "1 action",
+        "range": "60 feet",
+        "duration": "Instantaneous",
+        "requires_concentration": false,
+        "damage_type": "necrotic",
+        "damage_slots": {
+            "7": "7d8 + 30"
+        },
+        "save_type": "con"
+    },
+    {
+        "id": "fire-bolt",
+        "name": "Fire Bolt",
+        "level": 0,
+        "school": "evocation",
+        "casting_time": "1 action",
+        "range": "120 feet",
+        "duration": "Instantaneous",
+        "requires_concentration": false,
+        "damage_type": "fire",
+        "damage_character_levels": {
+            "1": "1d10",
+            "5": "2d10",
+            "11": "3d10",
+            "17": "4d10"
+        }
+    },
+    {
+        "id": "fire-shield",
+        "name": "Fire Shield",
+        "level": 4,
+        "school": "evocation",
+        "casting_time": "1 action",
+        "range": "Self",
+        "duration": "10 minutes",
+        "requires_concentration": false,
+        "damage_type": "fire",
+        "damage_slots": {
+            "4": "2d8"
+        }
+    },
+    {
+        "id": "fire-storm",
+        "name": "Fire Storm",
+        "level": 7,
+        "school": "evocation",
+        "casting_time": "1 action",
+        "range": "150 feet",
+        "duration": "Instantaneous",
+        "requires_concentration": false,
+        "damage_type": "fire",
+        "damage_slots": {
+            "7": "7d10"
+        },
+        "save_type": "dex"
+    },
+    {
+        "id": "fireball",
+        "name": "Fireball",
+        "level": 3,
+        "school": "evocation",
+        "casting_time": "1 action",
+        "range": "150 feet",
+        "duration": "Instantaneous",
+        "requires_concentration": false,
+        "damage_type": "fire",
+        "damage_slots": {
+            "3": "8d6",
+            "4": "9d6",
+            "5": "10d6",
+            "6": "11d6",
+            "7": "12d6",
+            "8": "13d6",
+            "9": "14d6"
+        },
+        "save_type": "dex"
+    },
+    {
+        "id": "flame-blade",
+        "name": "Flame Blade",
+        "level": 2,
+        "school": "evocation",
+        "casting_time": "1 bonus action",
+        "range": "Self",
+        "duration": "Up to 10 minutes",
+        "requires_concentration": true,
+        "damage_type": "fire",
+        "damage_slots": {
+            "2": "3d6",
+            "4": "4d6",
+            "6": "5d6",
+            "8": "6d6"
+        }
+    },
+    {
+        "id": "flame-strike",
+        "name": "Flame Strike",
+        "level": 5,
+        "school": "evocation",
+        "casting_time": "1 action",
+        "range": "60 feet",
+        "duration": "Instantaneous",
+        "requires_concentration": false,
+        "damage_type": "fire",
+        "damage_slots": {
+            "5": "4d6 + 4d6",
+            "6": "4d6 + 5d6",
+            "7": "4d6 + 6d6",
+            "8": "4d6 + 7d6",
+            "9": "4d6 + 8d6"
+        },
+        "save_type": "dex"
+    },
+    {
+        "id": "flaming-sphere",
+        "name": "Flaming Sphere",
+        "level": 2,
+        "school": "conjuration",
+        "casting_time": "1 action",
+        "range": "60 feet",
+        "duration": "Up to 1 minute",
+        "requires_concentration": true,
+        "damage_type": "fire",
+        "damage_slots": {
+            "2": "2d6",
+            "3": "3d6",
+            "4": "4d6",
+            "5": "5d6",
+            "6": "6d6",
+            "7": "7d6",
+            "8": "8d6",
+            "9": "9d6"
+        }
+    },
+    {
+        "id": "flesh-to-stone",
+        "name": "Flesh to Stone",
+        "level": 6,
+        "school": "transmutation",
+        "casting_time": "1 action",
+        "range": "60 feet",
+        "duration": "Up to 1 minute",
+        "requires_concentration": true,
+        "save_type": "con"
+    },
+    {
+        "id": "floating-disk",
+        "name": "Floating Disk",
+        "level": 1,
+        "school": "conjuration",
+        "casting_time": "1 action",
+        "range": "30 feet",
+        "duration": "1 hour",
+        "requires_concentration": false
+    },
+    {
+        "id": "fly",
+        "name": "Fly",
+        "level": 3,
+        "school": "transmutation",
+        "casting_time": "1 action",
+        "range": "Touch",
+        "duration": "Up to 10 minutes",
+        "requires_concentration": true
+    },
+    {
+        "id": "fog-cloud",
+        "name": "Fog Cloud",
+        "level": 1,
+        "school": "conjuration",
+        "casting_time": "1 action",
+        "range": "120 feet",
+        "duration": "Up to 1 hour",
+        "requires_concentration": true
+    },
+    {
+        "id": "forbiddance",
+        "name": "Forbiddance",
+        "level": 6,
+        "school": "abjuration",
+        "casting_time": "10 minutes",
+        "range": "Touch",
+        "duration": "24 hours",
+        "requires_concentration": false
+    },
+    {
+        "id": "forcecage",
+        "name": "Forcecage",
+        "level": 7,
+        "school": "evocation",
+        "casting_time": "1 action",
+        "range": "100 feet",
+        "duration": "1 hour",
+        "requires_concentration": false
+    },
+    {
+        "id": "foresight",
+        "name": "Foresight",
+        "level": 9,
+        "school": "divination",
+        "casting_time": "1 minute",
+        "range": "Touch",
+        "duration": "8 hours",
+        "requires_concentration": false
+    },
+    {
+        "id": "freedom-of-movement",
+        "name": "Freedom of Movement",
+        "level": 4,
+        "school": "abjuration",
+        "casting_time": "1 action",
+        "range": "Touch",
+        "duration": "1 hour",
+        "requires_concentration": false
+    },
+    {
+        "id": "freezing-sphere",
+        "name": "Freezing Sphere",
+        "level": 6,
+        "school": "evocation",
+        "casting_time": "1 action",
+        "range": "300 feet",
+        "duration": "Instantaneous",
+        "requires_concentration": false,
+        "damage_type": "cold",
+        "damage_slots": {
+            "6": "10d6"
+        },
+        "save_type": "con"
+    },
+    {
+        "id": "gaseous-form",
+        "name": "Gaseous Form",
+        "level": 3,
+        "school": "transmutation",
+        "casting_time": "1 action",
+        "range": "Touch",
+        "duration": "Up to 1 hour",
+        "requires_concentration": true
+    },
+    {
+        "id": "gate",
+        "name": "Gate",
+        "level": 9,
+        "school": "conjuration",
+        "casting_time": "1 action",
+        "range": "60 feet",
+        "duration": "Up to 1 minute",
+        "requires_concentration": true
+    },
+    {
+        "id": "geas",
+        "name": "Geas",
+        "level": 5,
+        "school": "enchantment",
+        "casting_time": "1 minute",
+        "range": "60 feet",
+        "duration": "30 days",
+        "requires_concentration": false,
+        "save_type": "wis"
+    },
+    {
+        "id": "gentle-repose",
+        "name": "Gentle Repose",
+        "level": 2,
+        "school": "necromancy",
+        "casting_time": "1 action",
+        "range": "Touch",
+        "duration": "10 days",
+        "requires_concentration": false
+    },
+    {
+        "id": "giant-insect",
+        "name": "Giant Insect",
+        "level": 4,
+        "school": "transmutation",
+        "casting_time": "1 action",
+        "range": "30 feet",
+        "duration": "Up to 10 minutes",
+        "requires_concentration": true
+    },
+    {
+        "id": "glibness",
+        "name": "Glibness",
+        "level": 8,
+        "school": "transmutation",
+        "casting_time": "1 action",
+        "range": "Self",
+        "duration": "1 hour",
+        "requires_concentration": false
+    },
+    {
+        "id": "globe-of-invulnerability",
+        "name": "Globe of Invulnerability",
+        "level": 6,
+        "school": "abjuration",
+        "casting_time": "1 action",
+        "range": "Self",
+        "duration": "Up to 1 minute",
+        "requires_concentration": true
+    },
+    {
+        "id": "glyph-of-warding",
+        "name": "Glyph of Warding",
+        "level": 3,
+        "school": "abjuration",
+        "casting_time": "1 hour",
+        "range": "Touch",
+        "duration": "Until dispelled",
+        "requires_concentration": false
+    },
+    {
+        "id": "goodberry",
+        "name": "Goodberry",
+        "level": 1,
+        "school": "transmutation",
+        "casting_time": "1 action",
+        "range": "Touch",
+        "duration": "Instantaneous",
+        "requires_concentration": false
+    },
+    {
+        "id": "grease",
+        "name": "Grease",
+        "level": 1,
+        "school": "conjuration",
+        "casting_time": "1 action",
+        "range": "60 feet",
+        "duration": "1 minute",
+        "requires_concentration": false,
+        "save_type": "dex"
+    },
+    {
+        "id": "greater-invisibility",
+        "name": "Greater Invisibility",
+        "level": 4,
+        "school": "illusion",
+        "casting_time": "1 action",
+        "range": "Touch",
+        "duration": "Up to 1 minute",
+        "requires_concentration": true
+    },
+    {
+        "id": "greater-restoration",
+        "name": "Greater Restoration",
+        "level": 5,
+        "school": "abjuration",
+        "casting_time": "1 action",
+        "range": "Touch",
+        "duration": "Instantaneous",
+        "requires_concentration": false
+    },
+    {
+        "id": "guardian-of-faith",
+        "name": "Guardian of Faith",
+        "level": 4,
+        "school": "conjuration",
+        "casting_time": "1 action",
+        "range": "30 feet",
+        "duration": "8 hours",
+        "requires_concentration": false,
+        "damage_type": "radiant",
+        "damage_slots": {
+            "4": "20"
+        },
+        "save_type": "dex"
+    },
+    {
+        "id": "guards-and-wards",
+        "name": "Guards and Wards",
+        "level": 6,
+        "school": "abjuration",
+        "casting_time": "10 minutes",
+        "range": "Touch",
+        "duration": "24 hours",
+        "requires_concentration": false
+    },
+    {
+        "id": "guidance",
+        "name": "Guidance",
+        "level": 0,
+        "school": "divination",
+        "casting_time": "1 action",
+        "range": "Touch",
+        "duration": "Up to 1 minute",
+        "requires_concentration": true
+    },
+    {
+        "id": "guiding-bolt",
+        "name": "Guiding Bolt",
+        "level": 1,
+        "school": "evocation",
+        "casting_time": "1 action",
+        "range": "120 feet",
+        "duration": "1 round",
+        "requires_concentration": false,
+        "damage_type": "radiant",
+        "damage_slots": {
+            "1": "4d6",
+            "2": "5d6",
+            "3": "6d6",
+            "4": "7d6",
+            "5": "8d6",
+            "6": "9d6",
+            "7": "10d6",
+            "8": "11d6",
+            "9": "12d6"
+        }
+    },
+    {
+        "id": "gust-of-wind",
+        "name": "Gust of Wind",
+        "level": 2,
+        "school": "evocation",
+        "casting_time": "1 action",
+        "range": "Self",
+        "duration": "Up to 1 minute",
+        "requires_concentration": true,
+        "save_type": "str"
+    },
+    {
+        "id": "hallow",
+        "name": "Hallow",
+        "level": 5,
+        "school": "evocation",
+        "casting_time": "24 hours",
+        "range": "Touch",
+        "duration": "Until dispelled",
+        "requires_concentration": false,
+        "save_type": "cha"
+    },
+    {
+        "id": "hallucinatory-terrain",
+        "name": "Hallucinatory Terrain",
+        "level": 4,
+        "school": "illusion",
+        "casting_time": "10 minutes",
+        "range": "300 feet",
+        "duration": "24 hours",
+        "requires_concentration": false
+    },
+    {
+        "id": "harm",
+        "name": "Harm",
+        "level": 6,
+        "school": "necromancy",
+        "casting_time": "1 action",
+        "range": "60 feet",
+        "duration": "Instantaneous",
+        "requires_concentration": false,
+        "damage_type": "necrotic",
+        "damage_slots": {
+            "6": "14d6"
+        },
+        "save_type": "con"
+    },
+    {
+        "id": "haste",
+        "name": "Haste",
+        "level": 3,
+        "school": "transmutation",
+        "casting_time": "1 action",
+        "range": "30 feet",
+        "duration": "Up to 1 minute",
+        "requires_concentration": true
+    },
+    {
+        "id": "heal",
+        "name": "Heal",
+        "level": 6,
+        "school": "evocation",
+        "casting_time": "1 action",
+        "range": "60 feet",
+        "duration": "Instantaneous",
+        "requires_concentration": false
+    },
+    {
+        "id": "healing-word",
+        "name": "Healing Word",
+        "level": 1,
+        "school": "evocation",
+        "casting_time": "1 bonus action",
+        "range": "60 feet",
+        "duration": "Instantaneous",
+        "requires_concentration": false
+    },
+    {
+        "id": "heat-metal",
+        "name": "Heat Metal",
+        "level": 2,
+        "school": "transmutation",
+        "casting_time": "1 action",
+        "range": "60 feet",
+        "duration": "Up to 1 minute",
+        "requires_concentration": true,
+        "damage_type": "fire",
+        "damage_slots": {
+            "2": "2d8",
+            "3": "3d8",
+            "4": "4d8",
+            "5": "5d8",
+            "6": "6d8",
+            "7": "7d8",
+            "8": "8d8",
+            "9": "9d8"
+        },
+        "save_type": "con"
+    },
+    {
+        "id": "hellish-rebuke",
+        "name": "Hellish Rebuke",
+        "level": 1,
+        "school": "evocation",
+        "casting_time": "1 reaction",
+        "range": "60 feet",
+        "duration": "Instantaneous",
+        "requires_concentration": false,
+        "damage_type": "fire",
+        "damage_slots": {
+            "1": "2d10",
+            "2": "3d10",
+            "3": "4d10",
+            "4": "5d10",
+            "5": "6d10",
+            "6": "7d10",
+            "7": "8d10",
+            "8": "9d10",
+            "9": "10d10"
+        },
+        "save_type": "dex"
+    },
+    {
+        "id": "heroes-feast",
+        "name": "Heroes' Feast",
+        "level": 6,
+        "school": "conjuration",
+        "casting_time": "10 minutes",
+        "range": "30 feet",
+        "duration": "Instantaneous",
+        "requires_concentration": false
+    },
+    {
+        "id": "heroism",
+        "name": "Heroism",
+        "level": 1,
+        "school": "enchantment",
+        "casting_time": "1 action",
+        "range": "Touch",
+        "duration": "Up to 1 minute",
+        "requires_concentration": true
+    },
+    {
+        "id": "hideous-laughter",
+        "name": "Hideous Laughter",
+        "level": 1,
+        "school": "enchantment",
+        "casting_time": "1 action",
+        "range": "30 feet",
+        "duration": "Up to 1 minute",
+        "requires_concentration": true,
+        "save_type": "wis"
+    },
+    {
+        "id": "hold-monster",
+        "name": "Hold Monster",
+        "level": 5,
+        "school": "enchantment",
+        "casting_time": "1 action",
+        "range": "90 feet",
+        "duration": "Up to 1 minute",
+        "requires_concentration": true,
+        "save_type": "wis"
+    },
+    {
+        "id": "hold-person",
+        "name": "Hold Person",
+        "level": 2,
+        "school": "enchantment",
+        "casting_time": "1 action",
+        "range": "60 feet",
+        "duration": "Up to 1 minute",
+        "requires_concentration": true,
+        "save_type": "wis"
+    },
+    {
+        "id": "holy-aura",
+        "name": "Holy Aura",
+        "level": 8,
+        "school": "abjuration",
+        "casting_time": "1 action",
+        "range": "Self",
+        "duration": "Up to 1 minute",
+        "requires_concentration": true
+    },
+    {
+        "id": "hunters-mark",
+        "name": "Hunter's Mark",
+        "level": 1,
+        "school": "divination",
+        "casting_time": "1 bonus action",
+        "range": "90 feet",
+        "duration": "Up to 1 hour",
+        "requires_concentration": true
+    },
+    {
+        "id": "hypnotic-pattern",
+        "name": "Hypnotic Pattern",
+        "level": 3,
+        "school": "illusion",
+        "casting_time": "1 action",
+        "range": "120 feet",
+        "duration": "Up to 1 minute",
+        "requires_concentration": true,
+        "save_type": "wis"
+    },
+    {
+        "id": "ice-storm",
+        "name": "Ice Storm",
+        "level": 4,
+        "school": "evocation",
+        "casting_time": "1 action",
+        "range": "300 feet",
+        "duration": "Instantaneous",
+        "requires_concentration": false,
+        "damage_type": "bludgeoning",
+        "damage_slots": {
+            "4": "2d8 + 4d6",
+            "5": "3d8 + 4d6",
+            "6": "4d8 + 4d6",
+            "7": "5d8 + 4d6",
+            "8": "6d8 + 4d6",
+            "9": "7d8 + 4d6"
+        },
+        "save_type": "dex"
+    },
+    {
+        "id": "identify",
+        "name": "Identify",
+        "level": 1,
+        "school": "divination",
+        "casting_time": "1 minute",
+        "range": "Touch",
+        "duration": "Instantaneous",
+        "requires_concentration": false
+    },
+    {
+        "id": "illusory-script",
+        "name": "Illusory Script",
+        "level": 1,
+        "school": "illusion",
+        "casting_time": "1 minute",
+        "range": "Touch",
+        "duration": "10 days",
+        "requires_concentration": false
+    },
+    {
+        "id": "imprisonment",
+        "name": "Imprisonment",
+        "level": 9,
+        "school": "abjuration",
+        "casting_time": "1 minute",
+        "range": "30 feet",
+        "duration": "Until dispelled",
+        "requires_concentration": false,
+        "save_type": "wis"
+    },
+    {
+        "id": "incendiary-cloud",
+        "name": "Incendiary Cloud",
+        "level": 8,
+        "school": "conjuration",
+        "casting_time": "1 action",
+        "range": "150 feet",
+        "duration": "Up to 1 minute",
+        "requires_concentration": true,
+        "damage_type": "fire",
+        "damage_slots": {
+            "8": "10d8"
+        },
+        "save_type": "dex"
+    },
+    {
+        "id": "inflict-wounds",
+        "name": "Inflict Wounds",
+        "level": 1,
+        "school": "necromancy",
+        "casting_time": "1 action",
+        "range": "Touch",
+        "duration": "Instantaneous",
+        "requires_concentration": false,
+        "damage_type": "necrotic",
+        "damage_slots": {
+            "1": "3d10",
+            "2": "4d10",
+            "3": "5d10",
+            "4": "6d10",
+            "5": "7d10",
+            "6": "8d10",
+            "7": "9d10",
+            "8": "10d10",
+            "9": "11d10"
+        }
+    },
+    {
+        "id": "insect-plague",
+        "name": "Insect Plague",
+        "level": 5,
+        "school": "conjuration",
+        "casting_time": "1 action",
+        "range": "300 feet",
+        "duration": "Up to 10 minutes",
+        "requires_concentration": true,
+        "damage_type": "piercing",
+        "damage_slots": {
+            "5": "4d10",
+            "6": "5d10",
+            "7": "6d10",
+            "8": "7d10",
+            "9": "8d10"
+        },
+        "save_type": "con"
+    },
+    {
+        "id": "instant-summons",
+        "name": "Instant Summons",
+        "level": 6,
+        "school": "conjuration",
+        "casting_time": "1 minute",
+        "range": "Touch",
+        "duration": "Until dispelled",
+        "requires_concentration": false
+    },
+    {
+        "id": "invisibility",
+        "name": "Invisibility",
+        "level": 2,
+        "school": "illusion",
+        "casting_time": "1 action",
+        "range": "Touch",
+        "duration": "Up to 1 hour",
+        "requires_concentration": true
+    },
+    {
+        "id": "irresistible-dance",
+        "name": "Irresistible Dance",
+        "level": 6,
+        "school": "enchantment",
+        "casting_time": "1 action",
+        "range": "30 feet",
+        "duration": "Up to 1 minute",
+        "requires_concentration": true
+    },
+    {
+        "id": "jump",
+        "name": "Jump",
+        "level": 1,
+        "school": "transmutation",
+        "casting_time": "1 action",
+        "range": "Touch",
+        "duration": "1 minute",
+        "requires_concentration": false
+    },
+    {
+        "id": "knock",
+        "name": "Knock",
+        "level": 2,
+        "school": "transmutation",
+        "casting_time": "1 action",
+        "range": "60 feet",
+        "duration": "Instantaneous",
+        "requires_concentration": false
+    },
+    {
+        "id": "legend-lore",
+        "name": "Legend Lore",
+        "level": 5,
+        "school": "divination",
+        "casting_time": "10 minutes",
+        "range": "Self",
+        "duration": "Instantaneous",
+        "requires_concentration": false
+    },
+    {
+        "id": "lesser-restoration",
+        "name": "Lesser Restoration",
+        "level": 2,
+        "school": "abjuration",
+        "casting_time": "1 action",
+        "range": "Touch",
+        "duration": "Instantaneous",
+        "requires_concentration": false
+    },
+    {
+        "id": "levitate",
+        "name": "Levitate",
+        "level": 2,
+        "school": "transmutation",
+        "casting_time": "1 action",
+        "range": "60 feet",
+        "duration": "Up to 10 minutes",
+        "requires_concentration": true
+    },
+    {
+        "id": "light",
+        "name": "Light",
+        "level": 0,
+        "school": "evocation",
+        "casting_time": "1 action",
+        "range": "Touch",
+        "duration": "1 hour",
+        "requires_concentration": false,
+        "save_type": "dex"
+    },
+    {
+        "id": "lightning-bolt",
+        "name": "Lightning Bolt",
+        "level": 3,
+        "school": "evocation",
+        "casting_time": "1 action",
+        "range": "Self",
+        "duration": "Instantaneous",
+        "requires_concentration": false,
+        "damage_type": "lightning",
+        "damage_slots": {
+            "3": "8d6",
+            "4": "9d6",
+            "5": "10d6",
+            "6": "11d6",
+            "7": "12d6",
+            "8": "13d6",
+            "9": "14d6"
+        },
+        "save_type": "dex"
+    },
+    {
+        "id": "locate-animals-or-plants",
+        "name": "Locate Animals or Plants",
+        "level": 2,
+        "school": "divination",
+        "casting_time": "1 action",
+        "range": "Self",
+        "duration": "Instantaneous",
+        "requires_concentration": false
+    },
+    {
+        "id": "locate-creature",
+        "name": "Locate Creature",
+        "level": 4,
+        "school": "divination",
+        "casting_time": "1 action",
+        "range": "Self",
+        "duration": "Up to 1 hour",
+        "requires_concentration": true
+    },
+    {
+        "id": "locate-object",
+        "name": "Locate Object",
+        "level": 2,
+        "school": "divination",
+        "casting_time": "1 action",
+        "range": "Self",
+        "duration": "Up to 10 minutes",
+        "requires_concentration": true
+    },
+    {
+        "id": "longstrider",
+        "name": "Longstrider",
+        "level": 1,
+        "school": "transmutation",
+        "casting_time": "1 action",
+        "range": "Touch",
+        "duration": "1 hour",
+        "requires_concentration": false
+    },
+    {
+        "id": "mage-armor",
+        "name": "Mage Armor",
+        "level": 1,
+        "school": "abjuration",
+        "casting_time": "1 action",
+        "range": "Touch",
+        "duration": "8 hours",
+        "requires_concentration": false
+    },
+    {
+        "id": "mage-hand",
+        "name": "Mage Hand",
+        "level": 0,
+        "school": "conjuration",
+        "casting_time": "1 action",
+        "range": "30 feet",
+        "duration": "1 minute",
+        "requires_concentration": false
+    },
+    {
+        "id": "magic-circle",
+        "name": "Magic Circle",
+        "level": 3,
+        "school": "abjuration",
+        "casting_time": "1 minute",
+        "range": "10 feet",
+        "duration": "1 hour",
+        "requires_concentration": false,
+        "save_type": "cha"
+    },
+    {
+        "id": "magic-jar",
+        "name": "Magic Jar",
+        "level": 6,
+        "school": "necromancy",
+        "casting_time": "1 minute",
+        "range": "Self",
+        "duration": "Until dispelled",
+        "requires_concentration": false,
+        "save_type": "cha"
+    },
+    {
+        "id": "magic-missile",
+        "name": "Magic Missile",
+        "level": 1,
+        "school": "evocation",
+        "casting_time": "1 action",
+        "range": "120 feet",
+        "duration": "Instantaneous",
+        "requires_concentration": false,
+        "damage_type": "force",
+        "damage_slots": {
+            "1": "3d4 + 3",
+            "2": "4d4 + 4",
+            "3": "5d4 + 5",
+            "4": "6d4 + 6",
+            "5": "7d4 + 7",
+            "6": "8d4 + 8",
+            "7": "9d4 + 9",
+            "8": "10d4 + 10",
+            "9": "11d4 + 11"
+        }
+    },
+    {
+        "id": "magic-mouth",
+        "name": "Magic Mouth",
+        "level": 2,
+        "school": "illusion",
+        "casting_time": "1 minute",
+        "range": "30 feet",
+        "duration": "Until dispelled",
+        "requires_concentration": false
+    },
+    {
+        "id": "magic-weapon",
+        "name": "Magic Weapon",
+        "level": 2,
+        "school": "transmutation",
+        "casting_time": "1 bonus action",
+        "range": "Touch",
+        "duration": "Up to 1 hour",
+        "requires_concentration": true
+    },
+    {
+        "id": "magnificent-mansion",
+        "name": "Magnificent Mansion",
+        "level": 7,
+        "school": "conjuration",
+        "casting_time": "1 minute",
+        "range": "300 feet",
+        "duration": "24 hours",
+        "requires_concentration": false
+    },
+    {
+        "id": "major-image",
+        "name": "Major Image",
+        "level": 3,
+        "school": "illusion",
+        "casting_time": "1 action",
+        "range": "120 feet",
+        "duration": "Up to 10 minutes",
+        "requires_concentration": true
+    },
+    {
+        "id": "mass-cure-wounds",
+        "name": "Mass Cure Wounds",
+        "level": 5,
+        "school": "conjuration",
+        "casting_time": "1 action",
+        "range": "60 feet",
+        "duration": "Instantaneous",
+        "requires_concentration": false
+    },
+    {
+        "id": "mass-heal",
+        "name": "Mass Heal",
+        "level": 9,
+        "school": "conjuration",
+        "casting_time": "1 action",
+        "range": "60 feet",
+        "duration": "Instantaneous",
+        "requires_concentration": false
+    },
+    {
+        "id": "mass-healing-word",
+        "name": "Mass Healing Word",
+        "level": 3,
+        "school": "evocation",
+        "casting_time": "1 bonus action",
+        "range": "60 feet",
+        "duration": "Instantaneous",
+        "requires_concentration": false
+    },
+    {
+        "id": "mass-suggestion",
+        "name": "Mass Suggestion",
+        "level": 6,
+        "school": "enchantment",
+        "casting_time": "1 action",
+        "range": "60 feet",
+        "duration": "24 hours",
+        "requires_concentration": false,
+        "save_type": "wis"
+    },
+    {
+        "id": "maze",
+        "name": "Maze",
+        "level": 8,
+        "school": "conjuration",
+        "casting_time": "1 action",
+        "range": "60 feet",
+        "duration": "Up to 10 minutes",
+        "requires_concentration": true
+    },
+    {
+        "id": "meld-into-stone",
+        "name": "Meld Into Stone",
+        "level": 3,
+        "school": "transmutation",
+        "casting_time": "1 action",
+        "range": "Touch",
+        "duration": "8 hours",
+        "requires_concentration": false
+    },
+    {
+        "id": "mending",
+        "name": "Mending",
+        "level": 0,
+        "school": "transmutation",
+        "casting_time": "1 minute",
+        "range": "Touch",
+        "duration": "Instantaneous",
+        "requires_concentration": false
+    },
+    {
+        "id": "message",
+        "name": "Message",
+        "level": 0,
+        "school": "transmutation",
+        "casting_time": "1 action",
+        "range": "120 feet",
+        "duration": "1 round",
+        "requires_concentration": false
+    },
+    {
+        "id": "meteor-swarm",
+        "name": "Meteor Swarm",
+        "level": 9,
+        "school": "evocation",
+        "casting_time": "1 action",
+        "range": "1 mile",
+        "duration": "Instantaneous",
+        "requires_concentration": false,
+        "damage_type": "fire",
+        "damage_slots": {
+            "9": "20d6 + 20d6"
+        },
+        "save_type": "dex"
+    },
+    {
+        "id": "mind-blank",
+        "name": "Mind Blank",
+        "level": 8,
+        "school": "abjuration",
+        "casting_time": "1 action",
+        "range": "Touch",
+        "duration": "24 hours",
+        "requires_concentration": false
+    },
+    {
+        "id": "minor-illusion",
+        "name": "Minor Illusion",
+        "level": 0,
+        "school": "illusion",
+        "casting_time": "1 action",
+        "range": "30 feet",
+        "duration": "1 minute",
+        "requires_concentration": false
+    },
+    {
+        "id": "mirage-arcane",
+        "name": "Mirage Arcane",
+        "level": 7,
+        "school": "illusion",
+        "casting_time": "10 minutes",
+        "range": "Sight",
+        "duration": "10 days",
+        "requires_concentration": false
+    },
+    {
+        "id": "mirror-image",
+        "name": "Mirror Image",
+        "level": 2,
+        "school": "illusion",
+        "casting_time": "1 action",
+        "range": "Self",
+        "duration": "1 minute",
+        "requires_concentration": false
+    },
+    {
+        "id": "mislead",
+        "name": "Mislead",
+        "level": 5,
+        "school": "illusion",
+        "casting_time": "1 action",
+        "range": "Self",
+        "duration": "Up to 1 hour",
+        "requires_concentration": true
+    },
+    {
+        "id": "misty-step",
+        "name": "Misty Step",
+        "level": 2,
+        "school": "conjuration",
+        "casting_time": "1 bonus action",
+        "range": "Self",
+        "duration": "Instantaneous",
+        "requires_concentration": false
+    },
+    {
+        "id": "modify-memory",
+        "name": "Modify Memory",
+        "level": 5,
+        "school": "enchantment",
+        "casting_time": "1 action",
+        "range": "30 feet",
+        "duration": "Up to 1 minute",
+        "requires_concentration": true,
+        "save_type": "wis"
+    },
+    {
+        "id": "moonbeam",
+        "name": "Moonbeam",
+        "level": 2,
+        "school": "evocation",
+        "casting_time": "1 action",
+        "range": "120 feet",
+        "duration": "Up to 1 minute",
+        "requires_concentration": true,
+        "damage_type": "radiant",
+        "damage_slots": {
+            "2": "2d10",
+            "3": "3d10",
+            "4": "4d10",
+            "5": "5d10",
+            "6": "6d10",
+            "7": "7d10",
+            "8": "8d10",
+            "9": "9d10"
+        },
+        "save_type": "con"
+    },
+    {
+        "id": "move-earth",
+        "name": "Move Earth",
+        "level": 6,
+        "school": "transmutation",
+        "casting_time": "1 action",
+        "range": "120 feet",
+        "duration": "Up to 2 hours",
+        "requires_concentration": true
+    },
+    {
+        "id": "nondetection",
+        "name": "Nondetection",
+        "level": 3,
+        "school": "abjuration",
+        "casting_time": "1 action",
+        "range": "Touch",
+        "duration": "8 hours",
+        "requires_concentration": false
+    },
+    {
+        "id": "pass-without-trace",
+        "name": "Pass Without Trace",
+        "level": 2,
+        "school": "abjuration",
+        "casting_time": "1 action",
+        "range": "Self",
+        "duration": "Up to 1 hour",
+        "requires_concentration": true
+    },
+    {
+        "id": "passwall",
+        "name": "Passwall",
+        "level": 5,
+        "school": "transmutation",
+        "casting_time": "1 action",
+        "range": "30 feet",
+        "duration": "1 hour",
+        "requires_concentration": false
+    },
+    {
+        "id": "phantasmal-killer",
+        "name": "Phantasmal Killer",
+        "level": 4,
+        "school": "illusion",
+        "casting_time": "1 action",
+        "range": "120 feet",
+        "duration": "Up to 1 minute",
+        "requires_concentration": true,
+        "damage_type": "psychic",
+        "damage_slots": {
+            "4": "4d10"
+        },
+        "save_type": "wis"
+    },
+    {
+        "id": "phantom-steed",
+        "name": "Phantom Steed",
+        "level": 3,
+        "school": "illusion",
+        "casting_time": "1 minute",
+        "range": "30 feet",
+        "duration": "1 hour",
+        "requires_concentration": false
+    },
+    {
+        "id": "planar-ally",
+        "name": "Planar Ally",
+        "level": 6,
+        "school": "conjuration",
+        "casting_time": "10 minutes",
+        "range": "60 feet",
+        "duration": "Instantaneous",
+        "requires_concentration": false
+    },
+    {
+        "id": "planar-binding",
+        "name": "Planar Binding",
+        "level": 5,
+        "school": "abjuration",
+        "casting_time": "1 hour",
+        "range": "60 feet",
+        "duration": "24 hours",
+        "requires_concentration": false,
+        "save_type": "cha"
+    },
+    {
+        "id": "plane-shift",
+        "name": "Plane Shift",
+        "level": 7,
+        "school": "conjuration",
+        "casting_time": "1 action",
+        "range": "Touch",
+        "duration": "Instantaneous",
+        "requires_concentration": false,
+        "save_type": "cha"
+    },
+    {
+        "id": "plant-growth",
+        "name": "Plant Growth",
+        "level": 3,
+        "school": "transmutation",
+        "casting_time": "1 action",
+        "range": "150 feet",
+        "duration": "Instantaneous",
+        "requires_concentration": false
+    },
+    {
+        "id": "poison-spray",
+        "name": "Poison Spray",
+        "level": 0,
+        "school": "conjuration",
+        "casting_time": "1 action",
+        "range": "10 feet",
+        "duration": "Instantaneous",
+        "requires_concentration": false,
+        "damage_type": "poison",
+        "damage_character_levels": {
+            "1": "1d12",
+            "5": "2d12",
+            "11": "3d12",
+            "17": "4d12"
+        },
+        "save_type": "con"
+    },
+    {
+        "id": "polymorph",
+        "name": "Polymorph",
+        "level": 4,
+        "school": "transmutation",
+        "casting_time": "1 action",
+        "range": "60 feet",
+        "duration": "Up to 1 hour",
+        "requires_concentration": true,
+        "save_type": "wis"
+    },
+    {
+        "id": "power-word-kill",
+        "name": "Power Word Kill",
+        "level": 9,
+        "school": "enchantment",
+        "casting_time": "1 action",
+        "range": "60 feet",
+        "duration": "Instantaneous",
+        "requires_concentration": false
+    },
+    {
+        "id": "power-word-stun",
+        "name": "Power Word Stun",
+        "level": 8,
+        "school": "enchantment",
+        "casting_time": "1 action",
+        "range": "60 feet",
+        "duration": "Instantaneous",
+        "requires_concentration": false
+    },
+    {
+        "id": "prayer-of-healing",
+        "name": "Prayer of Healing",
+        "level": 2,
+        "school": "evocation",
+        "casting_time": "10 minutes",
+        "range": "30 feet",
+        "duration": "Instantaneous",
+        "requires_concentration": false
+    },
+    {
+        "id": "prestidigitation",
+        "name": "Prestidigitation",
+        "level": 0,
+        "school": "transmutation",
+        "casting_time": "1 action",
+        "range": "10 feet",
+        "duration": "1 hour",
+        "requires_concentration": false
+    },
+    {
+        "id": "prismatic-spray",
+        "name": "Prismatic Spray",
+        "level": 7,
+        "school": "evocation",
+        "casting_time": "1 action",
+        "range": "Self",
+        "duration": "Instantaneous",
+        "requires_concentration": false,
+        "damage_slots": {
+            "7": "10d6"
+        },
+        "save_type": "dex"
+    },
+    {
+        "id": "prismatic-wall",
+        "name": "Prismatic Wall",
+        "level": 9,
+        "school": "abjuration",
+        "casting_time": "1 action",
+        "range": "60 feet",
+        "duration": "10 minutes",
+        "requires_concentration": false
+    },
+    {
+        "id": "private-sanctum",
+        "name": "Private Sanctum",
+        "level": 4,
+        "school": "abjuration",
+        "casting_time": "10 minutes",
+        "range": "120 feet",
+        "duration": "24 hours",
+        "requires_concentration": false
+    },
+    {
+        "id": "produce-flame",
+        "name": "Produce Flame",
+        "level": 0,
+        "school": "conjuration",
+        "casting_time": "1 action",
+        "range": "Self",
+        "duration": "10 minutes",
+        "requires_concentration": false,
+        "damage_type": "fire",
+        "damage_character_levels": {
+            "1": "1d8",
+            "5": "2d8",
+            "11": "3d8",
+            "17": "4d8"
+        }
+    },
+    {
+        "id": "programmed-illusion",
+        "name": "Programmed Illusion",
+        "level": 6,
+        "school": "illusion",
+        "casting_time": "1 action",
+        "range": "120 feet",
+        "duration": "Until dispelled",
+        "requires_concentration": false
+    },
+    {
+        "id": "project-image",
+        "name": "Project Image",
+        "level": 7,
+        "school": "illusion",
+        "casting_time": "1 action",
+        "range": "500 miles",
+        "duration": "Up to 24 hours",
+        "requires_concentration": true
+    },
+    {
+        "id": "protection-from-energy",
+        "name": "Protection From Energy",
+        "level": 3,
+        "school": "abjuration",
+        "casting_time": "1 action",
+        "range": "Touch",
+        "duration": "Up to 1 hour",
+        "requires_concentration": true
+    },
+    {
+        "id": "protection-from-evil-and-good",
+        "name": "Protection from Evil and Good",
+        "level": 1,
+        "school": "abjuration",
+        "casting_time": "1 action",
+        "range": "Touch",
+        "duration": "Up to 10 minutes",
+        "requires_concentration": true
+    },
+    {
+        "id": "protection-from-poison",
+        "name": "Protection from Poison",
+        "level": 2,
+        "school": "abjuration",
+        "casting_time": "1 action",
+        "range": "Touch",
+        "duration": "1 hour",
+        "requires_concentration": false
+    },
+    {
+        "id": "purify-food-and-drink",
+        "name": "Purify Food and Drink",
+        "level": 1,
+        "school": "transmutation",
+        "casting_time": "1 action",
+        "range": "10 feet",
+        "duration": "Instantaneous",
+        "requires_concentration": false
+    },
+    {
+        "id": "raise-dead",
+        "name": "Raise Dead",
+        "level": 5,
+        "school": "necromancy",
+        "casting_time": "1 hour",
+        "range": "Touch",
+        "duration": "Instantaneous",
+        "requires_concentration": false
+    },
+    {
+        "id": "ray-of-enfeeblement",
+        "name": "Ray of Enfeeblement",
+        "level": 2,
+        "school": "necromancy",
+        "casting_time": "1 action",
+        "range": "60 feet",
+        "duration": "Up to 1 minute",
+        "requires_concentration": true,
+        "save_type": "con"
+    },
+    {
+        "id": "ray-of-frost",
+        "name": "Ray of Frost",
+        "level": 0,
+        "school": "evocation",
+        "casting_time": "1 action",
+        "range": "60 feet",
+        "duration": "Instantaneous",
+        "requires_concentration": false,
+        "damage_type": "cold",
+        "damage_character_levels": {
+            "1": "1d8",
+            "5": "2d8",
+            "11": "3d8",
+            "17": "4d8"
+        }
+    },
+    {
+        "id": "regenerate",
+        "name": "Regenerate",
+        "level": 7,
+        "school": "transmutation",
+        "casting_time": "1 minute",
+        "range": "Touch",
+        "duration": "1 hour",
+        "requires_concentration": false
+    },
+    {
+        "id": "reincarnate",
+        "name": "Reincarnate",
+        "level": 5,
+        "school": "transmutation",
+        "casting_time": "1 hour",
+        "range": "Touch",
+        "duration": "Instantaneous",
+        "requires_concentration": false
+    },
+    {
+        "id": "remove-curse",
+        "name": "Remove Curse",
+        "level": 3,
+        "school": "abjuration",
+        "casting_time": "1 action",
+        "range": "Touch",
+        "duration": "Instantaneous",
+        "requires_concentration": false
+    },
+    {
+        "id": "resilient-sphere",
+        "name": "Resilient Sphere",
+        "level": 4,
+        "school": "evocation",
+        "casting_time": "1 action",
+        "range": "30 feet",
+        "duration": "Up to 1 minute",
+        "requires_concentration": true,
+        "save_type": "dex"
+    },
+    {
+        "id": "resistance",
+        "name": "Resistance",
+        "level": 0,
+        "school": "abjuration",
+        "casting_time": "1 action",
+        "range": "Touch",
+        "duration": "Up to 1 minute",
+        "requires_concentration": true
+    },
+    {
+        "id": "resurrection",
+        "name": "Resurrection",
+        "level": 7,
+        "school": "necromancy",
+        "casting_time": "1 hour",
+        "range": "Touch",
+        "duration": "Instantaneous",
+        "requires_concentration": false
+    },
+    {
+        "id": "reverse-gravity",
+        "name": "Reverse Gravity",
+        "level": 7,
+        "school": "transmutation",
+        "casting_time": "1 action",
+        "range": "100 feet",
+        "duration": "Up to 1 minute",
+        "requires_concentration": true,
+        "save_type": "dex"
+    },
+    {
+        "id": "revivify",
+        "name": "Revivify",
+        "level": 3,
+        "school": "conjuration",
+        "casting_time": "1 action",
+        "range": "Touch",
+        "duration": "Instantaneous",
+        "requires_concentration": false
+    },
+    {
+        "id": "rope-trick",
+        "name": "Rope Trick",
+        "level": 2,
+        "school": "transmutation",
+        "casting_time": "1 action",
+        "range": "Touch",
+        "duration": "1 hour",
+        "requires_concentration": false
+    },
+    {
+        "id": "sacred-flame",
+        "name": "Sacred Flame",
+        "level": 0,
+        "school": "evocation",
+        "casting_time": "1 action",
+        "range": "60 feet",
+        "duration": "Instantaneous",
+        "requires_concentration": false,
+        "damage_type": "radiant",
+        "damage_character_levels": {
+            "1": "1d8",
+            "5": "2d8",
+            "11": "3d8",
+            "17": "4d8"
+        },
+        "save_type": "dex"
+    },
+    {
+        "id": "sanctuary",
+        "name": "Sanctuary",
+        "level": 1,
+        "school": "abjuration",
+        "casting_time": "1 bonus action",
+        "range": "30 feet",
+        "duration": "1 minute",
+        "requires_concentration": false
+    },
+    {
+        "id": "scorching-ray",
+        "name": "Scorching Ray",
+        "level": 2,
+        "school": "evocation",
+        "casting_time": "1 action",
+        "range": "120 feet",
+        "duration": "Instantaneous",
+        "requires_concentration": false,
+        "damage_type": "fire",
+        "damage_slots": {
+            "2": "2d6"
+        }
+    },
+    {
+        "id": "scrying",
+        "name": "Scrying",
+        "level": 5,
+        "school": "divination",
+        "casting_time": "10 minutes",
+        "range": "Self",
+        "duration": "Up to 10 minutes",
+        "requires_concentration": true,
+        "save_type": "wis"
+    },
+    {
+        "id": "secret-chest",
+        "name": "Secret Chest",
+        "level": 4,
+        "school": "conjuration",
+        "casting_time": "1 action",
+        "range": "Touch",
+        "duration": "Instantaneous",
+        "requires_concentration": false
+    },
+    {
+        "id": "see-invisibility",
+        "name": "See Invisibility",
+        "level": 2,
+        "school": "divination",
+        "casting_time": "1 action",
+        "range": "Self",
+        "duration": "1 hour",
+        "requires_concentration": false
+    },
+    {
+        "id": "seeming",
+        "name": "Seeming",
+        "level": 5,
+        "school": "illusion",
+        "casting_time": "1 action",
+        "range": "30 feet",
+        "duration": "8 hours",
+        "requires_concentration": false
+    },
+    {
+        "id": "sending",
+        "name": "Sending",
+        "level": 3,
+        "school": "evocation",
+        "casting_time": "1 action",
+        "range": "Unlimited",
+        "duration": "1 round",
+        "requires_concentration": false
+    },
+    {
+        "id": "sequester",
+        "name": "Sequester",
+        "level": 7,
+        "school": "transmutation",
+        "casting_time": "1 action",
+        "range": "Touch",
+        "duration": "Until dispelled",
+        "requires_concentration": false
+    },
+    {
+        "id": "shapechange",
+        "name": "Shapechange",
+        "level": 9,
+        "school": "transmutation",
+        "casting_time": "1 action",
+        "range": "Self",
+        "duration": "Up to 1 hour",
+        "requires_concentration": true
+    },
+    {
+        "id": "shatter",
+        "name": "Shatter",
+        "level": 2,
+        "school": "evocation",
+        "casting_time": "1 action",
+        "range": "60 feet",
+        "duration": "Instantaneous",
+        "requires_concentration": false,
+        "damage_type": "thunder",
+        "damage_slots": {
+            "2": "3d8",
+            "3": "4d8",
+            "4": "5d8",
+            "5": "6d8",
+            "6": "7d8",
+            "7": "8d8",
+            "8": "9d8",
+            "9": "10d8"
+        },
+        "save_type": "con"
+    },
+    {
+        "id": "shield",
+        "name": "Shield",
+        "level": 1,
+        "school": "abjuration",
+        "casting_time": "1 reaction",
+        "range": "Self",
+        "duration": "1 round",
+        "requires_concentration": false
+    },
+    {
+        "id": "shield-of-faith",
+        "name": "Shield of Faith",
+        "level": 1,
+        "school": "abjuration",
+        "casting_time": "1 bonus action",
+        "range": "60 feet",
+        "duration": "Up to 10 minutes",
+        "requires_concentration": true
+    },
+    {
+        "id": "shillelagh",
+        "name": "Shillelagh",
+        "level": 0,
+        "school": "transmutation",
+        "casting_time": "1 bonus action",
+        "range": "Touch",
+        "duration": "1 minute",
+        "requires_concentration": false
+    },
+    {
+        "id": "shocking-grasp",
+        "name": "Shocking Grasp",
+        "level": 0,
+        "school": "evocation",
+        "casting_time": "1 action",
+        "range": "Touch",
+        "duration": "Instantaneous",
+        "requires_concentration": false,
+        "damage_type": "lightning",
+        "damage_character_levels": {
+            "1": "1d8",
+            "5": "2d8",
+            "11": "3d8",
+            "17": "4d8"
+        }
+    },
+    {
+        "id": "silence",
+        "name": "Silence",
+        "level": 2,
+        "school": "illusion",
+        "casting_time": "1 action",
+        "range": "120 feet",
+        "duration": "Up to 10 minutes",
+        "requires_concentration": true
+    },
+    {
+        "id": "silent-image",
+        "name": "Silent Image",
+        "level": 1,
+        "school": "illusion",
+        "casting_time": "1 action",
+        "range": "60 feet",
+        "duration": "Up to 10 minutes",
+        "requires_concentration": true
+    },
+    {
+        "id": "simulacrum",
+        "name": "Simulacrum",
+        "level": 7,
+        "school": "illusion",
+        "casting_time": "12 hours",
+        "range": "Touch",
+        "duration": "Until dispelled",
+        "requires_concentration": false
+    },
+    {
+        "id": "sleep",
+        "name": "Sleep",
+        "level": 1,
+        "school": "enchantment",
+        "casting_time": "1 action",
+        "range": "90 feet",
+        "duration": "1 minute",
+        "requires_concentration": false,
+        "damage_slots": {
+            "1": "5d8"
+        }
+    },
+    {
+        "id": "sleet-storm",
+        "name": "Sleet Storm",
+        "level": 3,
+        "school": "conjuration",
+        "casting_time": "1 action",
+        "range": "150 feet",
+        "duration": "Up to 1 minute",
+        "requires_concentration": true
+    },
+    {
+        "id": "slow",
+        "name": "Slow",
+        "level": 3,
+        "school": "transmutation",
+        "casting_time": "1 action",
+        "range": "120 feet",
+        "duration": "Up to 1 minute",
+        "requires_concentration": true,
+        "save_type": "wis"
+    },
+    {
+        "id": "spare-the-dying",
+        "name": "Spare the Dying",
+        "level": 0,
+        "school": "necromancy",
+        "casting_time": "1 action",
+        "range": "Touch",
+        "duration": "Instantaneous",
+        "requires_concentration": false
+    },
+    {
+        "id": "speak-with-animals",
+        "name": "Speak with Animals",
+        "level": 1,
+        "school": "divination",
+        "casting_time": "1 action",
+        "range": "Self",
+        "duration": "10 minutes",
+        "requires_concentration": false
+    },
+    {
+        "id": "speak-with-dead",
+        "name": "Speak with Dead",
+        "level": 3,
+        "school": "necromancy",
+        "casting_time": "1 action",
+        "range": "10 feet",
+        "duration": "10 minutes",
+        "requires_concentration": false
+    },
+    {
+        "id": "speak-with-plants",
+        "name": "Speak with Plants",
+        "level": 3,
+        "school": "transmutation",
+        "casting_time": "1 action",
+        "range": "Self",
+        "duration": "10 minutes",
+        "requires_concentration": false
+    },
+    {
+        "id": "spider-climb",
+        "name": "Spider Climb",
+        "level": 2,
+        "school": "transmutation",
+        "casting_time": "1 action",
+        "range": "Touch",
+        "duration": "Up to 1 hour",
+        "requires_concentration": true
+    },
+    {
+        "id": "spike-growth",
+        "name": "Spike Growth",
+        "level": 2,
+        "school": "transmutation",
+        "casting_time": "1 action",
+        "range": "150 feet",
+        "duration": "Up to 10 minutes",
+        "requires_concentration": true
+    },
+    {
+        "id": "spirit-guardians",
+        "name": "Spirit Guardians",
+        "level": 3,
+        "school": "conjuration",
+        "casting_time": "1 action",
+        "range": "Self",
+        "duration": "Up to 10 minutes",
+        "requires_concentration": true
+    },
+    {
+        "id": "spiritual-weapon",
+        "name": "Spiritual Weapon",
+        "level": 2,
+        "school": "evocation",
+        "casting_time": "1 bonus action",
+        "range": "60 feet",
+        "duration": "1 minute",
+        "requires_concentration": false,
+        "damage_type": "force",
+        "damage_slots": {
+            "2": "1d8 + MOD",
+            "3": "1d8 + MOD",
+            "4": "2d8 + MOD",
+            "5": "2d8 + MOD",
+            "6": "3d8 + MOD",
+            "7": "3d8 + MOD",
+            "8": "4d8 + MOD",
+            "9": "4d8 + MOD"
+        }
+    },
+    {
+        "id": "stinking-cloud",
+        "name": "Stinking Cloud",
+        "level": 3,
+        "school": "conjuration",
+        "casting_time": "1 action",
+        "range": "90 feet",
+        "duration": "Up to 1 minute",
+        "requires_concentration": true,
+        "save_type": "con"
+    },
+    {
+        "id": "stone-shape",
+        "name": "Stone Shape",
+        "level": 4,
+        "school": "transmutation",
+        "casting_time": "1 action",
+        "range": "Touch",
+        "duration": "Instantaneous",
+        "requires_concentration": false
+    },
+    {
+        "id": "stoneskin",
+        "name": "Stoneskin",
+        "level": 4,
+        "school": "abjuration",
+        "casting_time": "1 action",
+        "range": "Touch",
+        "duration": "Up to 1 hour",
+        "requires_concentration": true
+    },
+    {
+        "id": "storm-of-vengeance",
+        "name": "Storm of Vengeance",
+        "level": 9,
+        "school": "conjuration",
+        "casting_time": "1 action",
+        "range": "Sight",
+        "duration": "Up to 1 minute",
+        "requires_concentration": true,
+        "damage_type": "thunder",
+        "damage_slots": {
+            "9": "2d6"
+        },
+        "save_type": "con"
+    },
+    {
+        "id": "suggestion",
+        "name": "Suggestion",
+        "level": 2,
+        "school": "enchantment",
+        "casting_time": "1 action",
+        "range": "30 feet",
+        "duration": "Up to 8 hours",
+        "requires_concentration": true,
+        "save_type": "wis"
+    },
+    {
+        "id": "sunbeam",
+        "name": "Sunbeam",
+        "level": 6,
+        "school": "evocation",
+        "casting_time": "1 action",
+        "range": "Self",
+        "duration": "Up to 1 minute",
+        "requires_concentration": true,
+        "damage_type": "radiant",
+        "damage_slots": {
+            "6": "6d8"
+        },
+        "save_type": "con"
+    },
+    {
+        "id": "sunburst",
+        "name": "Sunburst",
+        "level": 8,
+        "school": "evocation",
+        "casting_time": "1 action",
+        "range": "150 feet",
+        "duration": "Instantaneous",
+        "requires_concentration": false,
+        "damage_type": "radiant",
+        "damage_slots": {
+            "8": "12d6"
+        },
+        "save_type": "con"
+    },
+    {
+        "id": "symbol",
+        "name": "Symbol",
+        "level": 7,
+        "school": "abjuration",
+        "casting_time": "1 minute",
+        "range": "Touch",
+        "duration": "Until dispelled",
+        "requires_concentration": false
+    },
+    {
+        "id": "telekinesis",
+        "name": "Telekinesis",
+        "level": 5,
+        "school": "transmutation",
+        "casting_time": "1 action",
+        "range": "60 feet",
+        "duration": "Up to 10 minutes",
+        "requires_concentration": true
+    },
+    {
+        "id": "telepathic-bond",
+        "name": "Telepathic Bond",
+        "level": 5,
+        "school": "divination",
+        "casting_time": "1 action",
+        "range": "30 feet",
+        "duration": "1 hour",
+        "requires_concentration": false
+    },
+    {
+        "id": "teleport",
+        "name": "Teleport",
+        "level": 7,
+        "school": "conjuration",
+        "casting_time": "1 action",
+        "range": "10 feet",
+        "duration": "Instantaneous",
+        "requires_concentration": false
+    },
+    {
+        "id": "teleportation-circle",
+        "name": "Teleportation Circle",
+        "level": 5,
+        "school": "conjuration",
+        "casting_time": "1 minute",
+        "range": "10 feet",
+        "duration": "1 round",
+        "requires_concentration": false
+    },
+    {
+        "id": "thaumaturgy",
+        "name": "Thaumaturgy",
+        "level": 0,
+        "school": "transmutation",
+        "casting_time": "1 action",
+        "range": "30 feet",
+        "duration": "1 minute",
+        "requires_concentration": false
+    },
+    {
+        "id": "thunderwave",
+        "name": "Thunderwave",
+        "level": 1,
+        "school": "evocation",
+        "casting_time": "1 action",
+        "range": "Self",
+        "duration": "Instantaneous",
+        "requires_concentration": false,
+        "damage_type": "thunder",
+        "damage_slots": {
+            "1": "2d8",
+            "2": "3d8",
+            "3": "4d8",
+            "4": "5d8",
+            "5": "6d8",
+            "6": "7d8",
+            "7": "8d8",
+            "8": "9d8",
+            "9": "10d8"
+        },
+        "save_type": "con"
+    },
+    {
+        "id": "time-stop",
+        "name": "Time Stop",
+        "level": 9,
+        "school": "transmutation",
+        "casting_time": "1 action",
+        "range": "Self",
+        "duration": "Instantaneous",
+        "requires_concentration": false
+    },
+    {
+        "id": "tiny-hut",
+        "name": "Tiny Hut",
+        "level": 3,
+        "school": "evocation",
+        "casting_time": "1 minute",
+        "range": "Self",
+        "duration": "8 hours",
+        "requires_concentration": false
+    },
+    {
+        "id": "tongues",
+        "name": "Tongues",
+        "level": 3,
+        "school": "divination",
+        "casting_time": "1 action",
+        "range": "Touch",
+        "duration": "1 hour",
+        "requires_concentration": false
+    },
+    {
+        "id": "transport-via-plants",
+        "name": "Transport via Plants",
+        "level": 6,
+        "school": "conjuration",
+        "casting_time": "1 action",
+        "range": "10 feet",
+        "duration": "1 round",
+        "requires_concentration": false
+    },
+    {
+        "id": "tree-stride",
+        "name": "Tree Stride",
+        "level": 5,
+        "school": "conjuration",
+        "casting_time": "1 action",
+        "range": "Self",
+        "duration": "Up to 1 minute",
+        "requires_concentration": true
+    },
+    {
+        "id": "true-polymorph",
+        "name": "True Polymorph",
+        "level": 9,
+        "school": "transmutation",
+        "casting_time": "1 action",
+        "range": "30 feet",
+        "duration": "Up to 1 hour",
+        "requires_concentration": true
+    },
+    {
+        "id": "true-resurrection",
+        "name": "True Resurrection",
+        "level": 9,
+        "school": "necromancy",
+        "casting_time": "1 hour",
+        "range": "Touch",
+        "duration": "Instantaneous",
+        "requires_concentration": false
+    },
+    {
+        "id": "true-seeing",
+        "name": "True Seeing",
+        "level": 6,
+        "school": "divination",
+        "casting_time": "1 action",
+        "range": "Touch",
+        "duration": "1 hour",
+        "requires_concentration": false
+    },
+    {
+        "id": "true-strike",
+        "name": "True Strike",
+        "level": 0,
+        "school": "divination",
+        "casting_time": "1 action",
+        "range": "30 feet",
+        "duration": "Up to 1 round",
+        "requires_concentration": true
+    },
+    {
+        "id": "unseen-servant",
+        "name": "Unseen Servant",
+        "level": 1,
+        "school": "conjuration",
+        "casting_time": "1 action",
+        "range": "60 feet",
+        "duration": "1 hour",
+        "requires_concentration": false
+    },
+    {
+        "id": "vampiric-touch",
+        "name": "Vampiric Touch",
+        "level": 3,
+        "school": "necromancy",
+        "casting_time": "1 action",
+        "range": "Self",
+        "duration": "Up to 1 minute",
+        "requires_concentration": true,
+        "damage_type": "necrotic",
+        "damage_slots": {
+            "3": "3d6",
+            "4": "4d6",
+            "5": "5d6",
+            "6": "6d6",
+            "7": "7d6",
+            "8": "8d6",
+            "9": "9d6"
+        }
+    },
+    {
+        "id": "vicious-mockery",
+        "name": "Vicious Mockery",
+        "level": 0,
+        "school": "enchantment",
+        "casting_time": "1 action",
+        "range": "60 feet",
+        "duration": "Instantaneous",
+        "requires_concentration": false,
+        "damage_type": "psychic",
+        "damage_character_levels": {
+            "1": "1d4",
+            "5": "2d4",
+            "11": "3d4",
+            "17": "4d4"
+        },
+        "save_type": "wis"
+    },
+    {
+        "id": "wall-of-fire",
+        "name": "Wall of Fire",
+        "level": 4,
+        "school": "evocation",
+        "casting_time": "1 action",
+        "range": "120 feet",
+        "duration": "Up to 1 minute",
+        "requires_concentration": true,
+        "damage_type": "fire",
+        "damage_slots": {
+            "4": "5d8"
+        },
+        "save_type": "dex"
+    },
+    {
+        "id": "wall-of-force",
+        "name": "Wall of Force",
+        "level": 5,
+        "school": "evocation",
+        "casting_time": "1 action",
+        "range": "120 feet",
+        "duration": "Up to 10 minutes",
+        "requires_concentration": true
+    },
+    {
+        "id": "wall-of-ice",
+        "name": "Wall of Ice",
+        "level": 6,
+        "school": "evocation",
+        "casting_time": "1 action",
+        "range": "120 feet",
+        "duration": "Up to 10 minutes",
+        "requires_concentration": true,
+        "damage_type": "cold",
+        "damage_slots": {
+            "6": "10d6",
+            "7": "12d6",
+            "8": "14d6",
+            "9": "16d6"
+        },
+        "save_type": "dex"
+    },
+    {
+        "id": "wall-of-stone",
+        "name": "Wall of Stone",
+        "level": 5,
+        "school": "evocation",
+        "casting_time": "1 action",
+        "range": "120 feet",
+        "duration": "Up to 10 minutes",
+        "requires_concentration": true
+    },
+    {
+        "id": "wall-of-thorns",
+        "name": "Wall of Thorns",
+        "level": 6,
+        "school": "conjuration",
+        "casting_time": "1 action",
+        "range": "120 feet",
+        "duration": "Up to 10 minutes",
+        "requires_concentration": true,
+        "damage_type": "piercing",
+        "damage_slots": {
+            "6": "7d8",
+            "7": "8d8",
+            "8": "9d8",
+            "9": "10d8"
+        },
+        "save_type": "dex"
+    },
+    {
+        "id": "warding-bond",
+        "name": "Warding Bond",
+        "level": 2,
+        "school": "abjuration",
+        "casting_time": "1 action",
+        "range": "Touch",
+        "duration": "1 hour",
+        "requires_concentration": false
+    },
+    {
+        "id": "water-breathing",
+        "name": "Water Breathing",
+        "level": 3,
+        "school": "transmutation",
+        "casting_time": "1 action",
+        "range": "30 feet",
+        "duration": "24 hours",
+        "requires_concentration": false
+    },
+    {
+        "id": "water-walk",
+        "name": "Water Walk",
+        "level": 3,
+        "school": "transmutation",
+        "casting_time": "1 action",
+        "range": "30 feet",
+        "duration": "1 hour",
+        "requires_concentration": false
+    },
+    {
+        "id": "web",
+        "name": "Web",
+        "level": 2,
+        "school": "conjuration",
+        "casting_time": "1 action",
+        "range": "60 feet",
+        "duration": "Up to 1 hour",
+        "requires_concentration": true
+    },
+    {
+        "id": "weird",
+        "name": "Weird",
+        "level": 9,
+        "school": "illusion",
+        "casting_time": "1 action",
+        "range": "120 feet",
+        "duration": "Up to 1 minute",
+        "requires_concentration": true,
+        "save_type": "wis"
+    },
+    {
+        "id": "wind-walk",
+        "name": "Wind Walk",
+        "level": 6,
+        "school": "transmutation",
+        "casting_time": "1 minute",
+        "range": "30 feet",
+        "duration": "8 hours",
+        "requires_concentration": false
+    },
+    {
+        "id": "wind-wall",
+        "name": "Wind Wall",
+        "level": 3,
+        "school": "evocation",
+        "casting_time": "1 action",
+        "range": "120 feet",
+        "duration": "Up to 1 minute",
+        "requires_concentration": true,
+        "damage_type": "bludgeoning",
+        "damage_slots": {
+            "3": "3d8"
+        },
+        "save_type": "str"
+    },
+    {
+        "id": "wish",
+        "name": "Wish",
+        "level": 9,
+        "school": "conjuration",
+        "casting_time": "1 action",
+        "range": "Self",
+        "duration": "Instantaneous",
+        "requires_concentration": false
+    },
+    {
+        "id": "word-of-recall",
+        "name": "Word of Recall",
+        "level": 6,
+        "school": "conjuration",
+        "casting_time": "1 action",
+        "range": "5 feet",
+        "duration": "Instantaneous",
+        "requires_concentration": false
+    },
+    {
+        "id": "zone-of-truth",
+        "name": "Zone of Truth",
+        "level": 2,
+        "school": "enchantment",
+        "casting_time": "1 action",
+        "range": "60 feet",
+        "duration": "10 minutes",
+        "requires_concentration": false
+    }
+]

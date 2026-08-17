@@ -1,8 +1,12 @@
 #include <iostream>
+#include <fstream>
+#include <nlohmann/json.hpp>
 #include <entt/entt.hpp>
 #include "loader.h"
 #include "battle.h"
 #include "components.h"
+
+using json = nlohmann::json;
 
 int main() {
     entt::registry registry;
@@ -21,17 +25,29 @@ int main() {
         "../data/backgrounds.json"
     );
 
-    auto& name = registry.get<NameComponent>(player).name;
-    auto& attrs = registry.get<AttributesComponent>(player);
-    
-    std::cout << "Personagem: " << name << "\n";
-    std::cout << "DEX base 14 + racial -> Final: " << attrs.stats[STAT_DEX] << "\n";
-    std::cout << "INT base 12 + subracial -> Final: " << attrs.stats[STAT_INT] << "\n\n";
+    auto& spellbook = registry.emplace<SpellbookComponent>(player);
+    spellbook.knownSpells.push_back("magic-missile");
+    spellbook.knownSpells.push_back("fireball");
 
-    auto& traits = registry.get<TraitsComponent>(player);
-    std::cout << "Tracos Adquiridos:\n";
-    for (const auto& t : traits.traits) {
-        std::cout << "- " << t << "\n";
+    auto& name = registry.get<NameComponent>(player).name;
+    std::cout << "Grimorio de " << name << " contem:\n";
+
+    std::ifstream spellsFile("../data/spells.json");
+    json spellsData = json::parse(spellsFile);
+
+    for (const auto& spellId : spellbook.knownSpells) {
+        for (const auto& spell : spellsData) {
+            if (spell["id"] == spellId) {
+                std::cout << "- " << spell["name"].get<std::string>() 
+                          << " (Nivel " << spell["level"].get<int>() << ", Escola: " 
+                          << spell["school"].get<std::string>() << ")\n";
+                
+                if (spell.contains("damage_type")) {
+                    std::cout << "  Dano tipo: " << spell["damage_type"].get<std::string>() << "\n";
+                }
+                break;
+            }
+        }
     }
 
     return 0;

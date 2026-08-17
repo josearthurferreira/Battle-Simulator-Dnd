@@ -44,4 +44,8 @@ struct ProficienciesComponent {
     std::vector<std::string> proficiencies;
 };
 
+struct SpellbookComponent {
+    std::vector<std::string> knownSpells;
+};
+
 #endif
