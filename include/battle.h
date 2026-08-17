@@ -1,32 +1,19 @@
 #ifndef INCLUDE_BATTLE_H
 #define INCLUDE_BATTLE_H
 
-#include "character.h"
-#include <cstdint>
+#include <entt/entt.hpp>
 #include <vector>
-
-enum BoardState : uint8_t {
-  FREE_SPACE,
-  PLAYER_SPACE,
-  ENEMY_SPACE,
-};
-
-class BattleEntity {
-public:
-  Character *character;
-  uint8_t iniciative;
-  std::pair<uint8_t, uint8_t> pos;
-};
 
 class BattleManager {
 public:
-  BattleManager(std::vector<Character *> participants);
-  ~BattleManager();
-  std::vector<BattleEntity *> entities;
+    BattleManager(entt::registry& registry);
+    ~BattleManager();
+
+    void SortInitiative(entt::registry& registry);
+    std::vector<entt::entity> GetTurnOrder() const;
 
 private:
+    std::vector<entt::entity> turnOrder;
 };
-
-void startBattle(void);
 
 #endif
