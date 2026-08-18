@@ -11,7 +11,7 @@ endif
 
 SRC_DIR = src
 BUILD_DIR = build/$(TARGET_PLATFORM)/$(VIDEO_BACKEND)
-SDL_DIR = SDL
+SDL_DIR = SDL/SDL_core
 
 ifeq ($(TARGET_PLATFORM), windows)
 	TARGET = app.exe
