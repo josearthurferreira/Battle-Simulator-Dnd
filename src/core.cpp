@@ -24,6 +24,7 @@ void Game::update(void) {
 }
 
 void Game::render(void) {
+  render_text(100, 100, "Manda um salve para a tropa");
   for (int i = 0; i < 25; i++) {
     draw_square(250 + 50 * (i % 5), 150 + 50 * (i / 5), 50, 50);
   }

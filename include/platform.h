@@ -9,6 +9,7 @@ void platform_begin_frame(void);
 void platform_end_frame(void);
 
 void draw_square(int x, int y, int w, int h);
+void render_text(int x, int y, const char *text);
 
 class Game;
 extern Game *gGame;

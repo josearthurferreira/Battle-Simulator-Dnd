@@ -11,7 +11,7 @@ endif
 
 SRC_DIR = src
 BUILD_DIR = build/$(TARGET_PLATFORM)/$(VIDEO_BACKEND)
-SDL_DIR = SDL/SDL_core
+SDL_DIR = SDL
 
 ifeq ($(TARGET_PLATFORM), windows)
 	TARGET = app.exe
@@ -33,8 +33,8 @@ endif
 
 ifeq ($(VIDEO_BACKEND), sdl)
     PLATFORM_SRCS := src/platform/sdl.cpp
-    CPP_FLAGS += -I$(SDL_DIR)/include
-    LDFLAGS += $(BUILD_DIR)/SDL/libSDL3.a
+    CPP_FLAGS += -I$(SDL_DIR)/SDL_core/include -I$(SDL_DIR)/SDL_ttf/include
+    LDFLAGS += $(BUILD_DIR)/SDL/libSDL3.a $(BUILD_DIR)/SDL/libSDL3_ttf.so
 else ifeq ($(VIDEO_BACKEND), framebuffer)
     PLATFORM_SRCS := src/platform/framebuffer.cpp
 else
@@ -46,18 +46,25 @@ COMMON_SRCS := $(shell find src -name '*.cpp' ! -path 'src/platform/*')
 SRCS := $(COMMON_SRCS) $(PLATFORM_SRCS)
 OBJS := $(patsubst src/%.cpp, $(BUILD_DIR)/%.o, $(SRCS))
 
-$(BUILD_DIR)/$(TARGET): $(OBJS) $(BUILD_DIR)/SDL/libSDL3.a
+$(BUILD_DIR)/$(TARGET): $(OBJS) $(BUILD_DIR)/SDL_core/libSDL3.a $(BUILD_DIR)/SDL_ttf/libSDL3_ttf.so
 	$(CPP) $^ -o $@
 
 $(BUILD_DIR)/%.o: src/%.cpp
 	@mkdir -p $(dir $@)
 	$(CPP) $(CPP_FLAGS) -c $< -o $@
 
-$(BUILD_DIR)/SDL/libSDL3.a:
-	@mkdir -p $(BUILD_DIR)/SDL
-	cd $(BUILD_DIR)/SDL && \
-		cmake ../../../../$(SDL_DIR) $(SDL_CMAKE_FLAGS) && \
+$(BUILD_DIR)/SDL_core/libSDL3.a:
+	@mkdir -p $(BUILD_DIR)/SDL_core
+	cd $(BUILD_DIR)/SDL_core && \
+		cmake ../../../../$(SDL_DIR)/SDL_core $(SDL_CMAKE_FLAGS) && \
 		make -j
+
+$(BUILD_DIR)/SDL_ttf/libSDL3_ttf.so:
+	@mkdir -p $(BUILD_DIR)/SDL_ttf
+	cd $(BUILD_DIR)/SDL_ttf && \
+		cmake ../../../../$(SDL_DIR)/SDL_ttf $(SDL_CMAKE_FLAGS) && \
+		make -j
+		cp $(BUILD_DIR)/SDL_ttf/libSDL3_ttf.so* $(BUILD_DIR)/
 
 clean:
 	rm -rf build/*.o

@@ -1,6 +1,7 @@
 #include "SDL3/SDL_init.h"
 #include "SDL3/SDL_render.h"
 #include "SDL3/SDL_video.h"
+#include "SDL3_ttf/SDL_ttf.h"
 #include "game.h"
 #include "platform.h"
 #include <cassert>
@@ -8,9 +9,15 @@
 
 SDL_Window *win;
 SDL_Renderer *ren;
+TTF_Font *font;
 
 void init_platform(void) {
   SDL_Init(SDL_INIT_VIDEO);
+  TTF_Init();
+  font = TTF_OpenFont("assets/macondo.ttf", 56);
+  if (font) {
+    printf("fonte carregada com sucesso!\n");
+  }
   win = SDL_CreateWindow("Hop", 800, 640, 0);
   assert(win);
   ren = SDL_CreateRenderer(win, NULL);
@@ -110,4 +117,32 @@ void draw_square(int x, int y, int w, int h) {
                  .h = static_cast<float>(h)};
 
   SDL_RenderRect(ren, &r);
+}
+
+void render_text(int x, int y, const char *text) {
+  if (!text || !font || !ren)
+    return;
+
+  SDL_Color color = {0, 0, 0, 255};
+  SDL_Surface *surf = TTF_RenderText_Solid(font, text, strlen(text), color);
+  if (!surf) {
+    return;
+  }
+
+  SDL_Texture *texture = SDL_CreateTextureFromSurface(ren, surf);
+
+  SDL_DestroySurface(surf);
+
+  if (!texture) {
+    return;
+  }
+
+  float tex_w, tex_h;
+  SDL_GetTextureSize(texture, &tex_w, &tex_h);
+
+  SDL_FRect src = {0, 0, tex_w, tex_h};
+  SDL_FRect dest = {(float)x, (float)y, tex_w, tex_h};
+
+  SDL_RenderTexture(ren, texture, &src, &dest);
+  SDL_DestroyTexture(texture);
 }
