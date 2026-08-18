@@ -8,4 +8,9 @@ void handle_events_backend(void);
 void platform_begin_frame(void);
 void platform_end_frame(void);
 
+void draw_square(int x, int y, int w, int h);
+
+class Game;
+extern Game *gGame;
+
 #endif // INCLUDE_PLATFORM_H_

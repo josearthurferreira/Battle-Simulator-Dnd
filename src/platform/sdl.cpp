@@ -1,13 +1,13 @@
 #include "SDL3/SDL_init.h"
 #include "SDL3/SDL_render.h"
 #include "SDL3/SDL_video.h"
+#include "game.h"
 #include "platform.h"
 #include <cassert>
 #include <cstdlib>
 
 SDL_Window *win;
 SDL_Renderer *ren;
-extern bool game_active;
 
 void init_platform(void) {
   SDL_Init(SDL_INIT_VIDEO);
@@ -15,7 +15,7 @@ void init_platform(void) {
   assert(win);
   ren = SDL_CreateRenderer(win, NULL);
   assert(ren);
-  game_active = true;
+  gGame->active = true;
 }
 
 void destroy_platform(void) {
@@ -34,8 +34,80 @@ void platform_end_frame(void) { SDL_RenderPresent(ren); }
 void platform_poll_events(void) {
   SDL_Event e;
   while (SDL_PollEvent(&e)) {
-    if (e.type == SDL_EVENT_QUIT) {
-      game_active = false;
+    switch (e.type) {
+    case SDL_EVENT_QUIT:
+      gGame->active = false;
+      break;
+
+    case SDL_EVENT_KEY_DOWN:
+      if (e.key.repeat)
+        break;
+      switch (e.key.key) {
+      case SDLK_W:
+        gGame->keyState.set(0);
+        break; // UP
+      case SDLK_S:
+        gGame->keyState.set(1);
+        break; // DOWN
+      case SDLK_A:
+        gGame->keyState.set(2);
+        break; // LEFT
+      case SDLK_D:
+        gGame->keyState.set(3);
+        break; // RIGHT
+      case SDLK_Z:
+        gGame->keyState.set(4);
+        break; // A
+      case SDLK_X:
+        gGame->keyState.set(5);
+        break; // B
+      case SDLK_RETURN:
+        gGame->keyState.set(6);
+        break; // START
+      case SDLK_BACKSPACE:
+        gGame->keyState.set(7);
+        break; // SELECT
+      }
+      break;
+
+    case SDL_EVENT_KEY_UP:
+      switch (e.key.key) {
+      case SDLK_W:
+        gGame->keyState.reset(0);
+        break;
+      case SDLK_S:
+        gGame->keyState.reset(1);
+        break;
+      case SDLK_A:
+        gGame->keyState.reset(2);
+        break;
+      case SDLK_D:
+        gGame->keyState.reset(3);
+        break;
+      case SDLK_Z:
+        gGame->keyState.reset(4);
+        break;
+      case SDLK_X:
+        gGame->keyState.reset(5);
+        break;
+      case SDLK_RETURN:
+        gGame->keyState.reset(6);
+        break;
+      case SDLK_BACKSPACE:
+        gGame->keyState.reset(7);
+        break;
+      }
+      break;
     }
   }
+}
+
+void draw_square(int x, int y, int w, int h) {
+  SDL_SetRenderDrawColor(ren, 0, 0, 0, 1);
+  SDL_FRect r = {.x = static_cast<float>(x),
+                 .y = static_cast<float>(y),
+                 .w = static_cast<float>(w),
+                 .h = static_cast<float>(h)};
+
+  SDL_RenderRect(ren, &r);
 }

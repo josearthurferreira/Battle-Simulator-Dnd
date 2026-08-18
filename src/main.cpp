@@ -1,21 +1,18 @@
+#include "game.h"
 #include "platform.h"
 
-void game_update(void) {}
-void game_render(void) {}
-
-bool game_active = false;
-
 int main(int argc, char const *argv[]) {
+  gGame = new Game();
   init_platform();
 
-  while (game_active) {
+  while (gGame->active) {
     platform_poll_events();
-    game_update();
+    gGame->update();
     platform_begin_frame();
-    game_render();
+    gGame->render();
     platform_end_frame();
   }
-
+  delete gGame;
   destroy_platform();
   return 0;
 }
