@@ -20,6 +20,9 @@ public:
   // W S A D Z X ENTER BACKSPACE
   std::bitset<8> keyState;
   std::bitset<8> prevKeyState;
+
+  Game();
+  ~Game();
   bool active;
 
   void update();
