@@ -14,7 +14,7 @@ TTF_Font *font;
 void init_platform(void) {
   SDL_Init(SDL_INIT_VIDEO);
   TTF_Init();
-  font = TTF_OpenFont("assets/macondo.ttf", 56);
+  font = TTF_OpenFont("assets/macondo.ttf", 64);
   if (font) {
     printf("fonte carregada com sucesso!\n");
   }
@@ -119,12 +119,12 @@ void draw_square(int x, int y, int w, int h) {
   SDL_RenderRect(ren, &r);
 }
 
-void render_text(int x, int y, const char *text) {
+void render_text(int x, int y, const char *text, float size) {
   if (!text || !font || !ren)
     return;
 
   SDL_Color color = {0, 0, 0, 255};
-  SDL_Surface *surf = TTF_RenderText_Solid(font, text, strlen(text), color);
+  SDL_Surface *surf = TTF_RenderText_Blended(font, text, strlen(text), color);
   if (!surf) {
     return;
   }
@@ -141,7 +141,7 @@ void render_text(int x, int y, const char *text) {
   SDL_GetTextureSize(texture, &tex_w, &tex_h);
 
   SDL_FRect src = {0, 0, tex_w, tex_h};
-  SDL_FRect dest = {(float)x, (float)y, tex_w, tex_h};
+  SDL_FRect dest = {(float)x, (float)y, tex_w * size / tex_h, size};
 
   SDL_RenderTexture(ren, texture, &src, &dest);
   SDL_DestroyTexture(texture);
