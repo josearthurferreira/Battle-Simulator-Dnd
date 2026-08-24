@@ -149,24 +149,46 @@ void render_text(int x, int y, const char *text, float size) {
 }
 
 void *platform_load_img(const char *path) {
-  SDL_Texture *texture = IMG_LoadTexture(ren, path);
+  SDL_Surface *surf = IMG_Load(path);
+  assert(surf);
+  const SDL_Palette *palette = SDL_GetSurfacePalette(surf);
+  if (palette) {
+    SDL_Color transparentColor = palette->colors[0];
+
+    Uint32 colorKey = SDL_MapSurfaceRGB(surf, transparentColor.r,
+                                        transparentColor.g, transparentColor.b);
+    SDL_SetSurfaceColorKey(surf, true, colorKey);
+  }
+
+  SDL_Texture *texture = SDL_CreateTextureFromSurface(ren, surf);
+
   if (!texture) {
     fprintf(stderr, "Erro ao carregar imagem '%s': %s\n", path, SDL_GetError());
   }
   assert(texture);
+  SDL_DestroySurface(surf);
   float tex_w, tex_h;
   SDL_GetTextureSize(texture, &tex_w, &tex_h);
   printf("%f x %f\n", tex_w, tex_h);
   return texture;
 }
 
-void platform_render_sprite(void *data, Vec2f pos) {
+void platform_render_sprite(void *data, Vec2f size, Vec2f pos, bool hFlip,
+                            bool vFlip, float rot_angle) {
   SDL_Texture *texture = (SDL_Texture *)data;
 
-  SDL_FRect src = {0, 0, 16.0, 32.0};
-  SDL_FRect dest = {pos.x, pos.y, 5 * 16.0, 5 * 32.0};
+  SDL_FRect src = {0, 0, size.x, size.y};
+  SDL_FRect dest = {pos.x, pos.y, 5 * size.x, 5 * size.y};
 
-  SDL_RenderTexture(ren, texture, &src, &dest);
+  SDL_FlipMode flip = SDL_FLIP_NONE;
+  if (hFlip && vFlip)
+    flip = SDL_FLIP_HORIZONTAL_AND_VERTICAL;
+  else if (hFlip)
+    flip = SDL_FLIP_HORIZONTAL;
+  else if (vFlip)
+    flip = SDL_FLIP_VERTICAL;
+
+  SDL_RenderTextureRotated(ren, texture, &src, &dest, rot_angle, NULL, flip);
 }
 
 void platform_destroy_img(void *data) {

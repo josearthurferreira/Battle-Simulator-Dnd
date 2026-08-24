@@ -45,6 +45,7 @@ int main() {
     platform_begin_frame();
     gGame->render();
     platform_end_frame();
+    gGame->prevKeyState = gGame->keyState;
   }
   delete gGame;
   destroy_platform();

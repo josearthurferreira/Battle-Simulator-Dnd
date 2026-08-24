@@ -11,9 +11,13 @@ public:
   void update(void);
   void render(Vec2f pos);
 
+  friend class Object;
+
 private:
   void *data;
   float w, h;
+  bool hFlip, vFlip;
+  float rotate;
 };
 
 #endif // INCLUDE_SPRITE_H_

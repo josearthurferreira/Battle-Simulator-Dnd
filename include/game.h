@@ -21,6 +21,9 @@ public:
   std::bitset<8> keyState;
   std::bitset<8> prevKeyState;
 
+  std::bitset<8> keyHeld();
+  std::bitset<8> keyPressed();
+
   Game();
   ~Game();
   bool active;

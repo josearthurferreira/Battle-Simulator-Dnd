@@ -15,17 +15,23 @@ Game::Game() {
 Game::~Game() {}
 
 void Game::update(void) {
-  if (keyState.test(KEY_UP)) {
+  if (keyHeld().test(KEY_UP)) {
     obj->pos.y -= 0.2;
   }
-  if (keyState.test(KEY_DOWN)) {
+  if (keyHeld().test(KEY_DOWN)) {
     obj->pos.y += 0.2;
   }
-  if (keyState.test(KEY_LEFT)) {
+  if (keyHeld().test(KEY_LEFT)) {
     obj->pos.x -= 0.2;
   }
-  if (keyState.test(KEY_RIGHT)) {
+  if (keyHeld().test(KEY_RIGHT)) {
     obj->pos.x += 0.2;
+  }
+  if (keyPressed().test(KEY_START)) {
+    obj->hFlip();
+  }
+  if (keyPressed().test(KEY_SELECT)) {
+    obj->vFlip();
   }
   obj->update();
 }
@@ -37,3 +43,7 @@ void Game::render(void) {
   obj->render();
   render_text(100, 100, "Manda um salve para a tropa", 30.0f);
 }
+
+std::bitset<8> Game::keyHeld() { return keyState & prevKeyState; }
+
+std::bitset<8> Game::keyPressed() { return keyState & ~prevKeyState; }
