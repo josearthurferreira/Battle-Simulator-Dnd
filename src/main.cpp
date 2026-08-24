@@ -37,7 +37,6 @@ int main() {
     }
   }
 
-  gGame = new Game();
   init_platform();
 
   while (gGame->active) {

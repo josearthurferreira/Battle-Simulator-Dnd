@@ -1,39 +1,39 @@
 #include "game.h"
+#include "objects.h"
 #include "platform.h"
 
 Game *gGame;
+Object *obj = nullptr;
 
 int i = 0;
 
-struct {
-  int x;
-  int y;
-} PlayerPos;
+Game::Game() {
+  obj = new Object("../assets/character.png", 16, 32);
+  obj->pos = {100, 100};
+}
 
-Game::Game() {}
 Game::~Game() {}
 
 void Game::update(void) {
   if (keyState.test(KEY_UP)) {
-    PlayerPos.y--;
+    obj->pos.y -= 0.2;
   }
   if (keyState.test(KEY_DOWN)) {
-    PlayerPos.y++;
+    obj->pos.y += 0.2;
   }
   if (keyState.test(KEY_LEFT)) {
-    PlayerPos.x--;
+    obj->pos.x -= 0.2;
   }
   if (keyState.test(KEY_RIGHT)) {
-    PlayerPos.x++;
+    obj->pos.x += 0.2;
   }
+  obj->update();
 }
 
-#include <math.h>
-
 void Game::render(void) {
-  render_text(100, 100, "Manda um salve para a tropa", 30.0f);
-
   for (int j = 0; j < 25; j++) {
     draw_square(250 + 50 * (j % 5), 150 + 50 * (j / 5), 50, 50);
   }
+  obj->render();
+  render_text(100, 100, "Manda um salve para a tropa", 30.0f);
 }

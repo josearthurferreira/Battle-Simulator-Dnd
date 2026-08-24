@@ -1,6 +1,7 @@
 #include "SDL3/SDL_init.h"
 #include "SDL3/SDL_render.h"
 #include "SDL3/SDL_video.h"
+#include "SDL3_image/SDL_image.h"
 #include "SDL3_ttf/SDL_ttf.h"
 #include "game.h"
 #include "platform.h"
@@ -15,13 +16,13 @@ void init_platform(void) {
   SDL_Init(SDL_INIT_VIDEO);
   TTF_Init();
   font = TTF_OpenFont("../assets/macondo.ttf", 64);
-  if (font) {
-    printf("fonte carregada com sucesso!\n");
-  }
+  assert(font);
+  printf("fonte carregada com sucesso!\n");
   win = SDL_CreateWindow("Hop", 800, 640, 0);
   assert(win);
   ren = SDL_CreateRenderer(win, NULL);
   assert(ren);
+  gGame = new Game();
   gGame->active = true;
 }
 
@@ -145,4 +146,29 @@ void render_text(int x, int y, const char *text, float size) {
 
   SDL_RenderTexture(ren, texture, &src, &dest);
   SDL_DestroyTexture(texture);
+}
+
+void *platform_load_img(const char *path) {
+  SDL_Texture *texture = IMG_LoadTexture(ren, path);
+  if (!texture) {
+    fprintf(stderr, "Erro ao carregar imagem '%s': %s\n", path, SDL_GetError());
+  }
+  assert(texture);
+  float tex_w, tex_h;
+  SDL_GetTextureSize(texture, &tex_w, &tex_h);
+  printf("%f x %f\n", tex_w, tex_h);
+  return texture;
+}
+
+void platform_render_sprite(void *data, Vec2f pos) {
+  SDL_Texture *texture = (SDL_Texture *)data;
+
+  SDL_FRect src = {0, 0, 16.0, 32.0};
+  SDL_FRect dest = {pos.x, pos.y, 5 * 16.0, 5 * 32.0};
+
+  SDL_RenderTexture(ren, texture, &src, &dest);
+}
+
+void platform_destroy_img(void *data) {
+  SDL_DestroyTexture((SDL_Texture *)data);
 }

@@ -1,19 +1,11 @@
-#ifndef INCLUDE_OBJECTS_H
-#define INCLUDE_OBJECTS_H
+#include "objects.h"
 
-#include "sprite.h"
-#include "types.h"
+Object::Object(const char *path, float w, float h) {
+  spr = new Sprite(path, w, h);
+}
 
-class Object {
-public:
-  Vec2 pos;
-  Vec2 size;
-  Sprite *spr;
+Object::~Object() { delete spr; }
 
-  void update();
-  void render();
+void Object::update() {}
 
-private:
-};
-
-#endif // !INCLUDE_OBJECTS_H
+void Object::render() { spr->render(pos); }
