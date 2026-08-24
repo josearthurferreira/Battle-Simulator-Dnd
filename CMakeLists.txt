@@ -6,10 +6,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 include(FetchContent)
 set(FETCHCONTENT_QUIET FALSE)
-
-set(BUILD_SHARED_LIBS OFF)
-set(SDL_SHARED OFF)
-set(SDL_STATIC ON)
+option(BUILD_PLATFORM_SDL "Build with SDL3 platform frontend" ON)
 
 FetchContent_Declare(
     entt
@@ -25,22 +22,52 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(json)
 
-FetchContent_Declare(
-    SDL3
-    GIT_REPOSITORY https://github.com/libsdl-org/SDL.git
-    GIT_TAG release-3.4.14
-)
-FetchContent_MakeAvailable(SDL3)
-
-FetchContent_Declare(
-    SDL3_TTF
-    GIT_REPOSITORY https://github.com/libsdl-org/SDL_ttf.git
-    GIT_TAG release-3.2.2
-)
-FetchContent_MakeAvailable(SDL3_TTF)
-
-add_executable(BattleSimulator src/main.cpp src/battle_entity.cpp src/loader.cpp src/platform/sdl.cpp src/core.cpp)
-
 include_directories(include)
 
-target_link_libraries(BattleSimulator PRIVATE EnTT::EnTT nlohmann_json::nlohmann_json SDL3::SDL3 SDL3_ttf::SDL3_ttf)
+add_library(BattleSimulatorCore
+    src/main.cpp
+    src/battle_entity.cpp
+    src/loader.cpp
+    src/core.cpp
+    src/sprite.cpp
+    src/objects.cpp
+)
+
+target_link_libraries(BattleSimulatorCore PRIVATE
+    EnTT::EnTT
+    nlohmann_json::nlohmann_json
+)
+
+if(BUILD_PLATFORM_SDL)
+    set(BUILD_SHARED_LIBS OFF)
+    set(SDL_SHARED OFF)
+    set(SDL_STATIC ON)
+
+    FetchContent_Declare(
+        SDL3
+        GIT_REPOSITORY https://github.com/libsdl-org/SDL.git
+        GIT_TAG release-3.4.14
+    )
+    FetchContent_MakeAvailable(SDL3)
+
+    FetchContent_Declare(
+        SDL3_TTF
+        GIT_REPOSITORY https://github.com/libsdl-org/SDL_ttf.git
+        GIT_TAG release-3.2.2
+    )
+    FetchContent_MakeAvailable(SDL3_TTF)
+
+    FetchContent_Declare(
+        SDL3_IMAGE
+        GIT_REPOSITORY https://github.com/libsdl-org/SDL_image.git
+        GIT_TAG release-3.4.4
+    )
+    FetchContent_MakeAvailable(SDL3_IMAGE)
+    add_executable(BattleSimulator src/platform/sdl.cpp)
+    target_link_libraries(BattleSimulator PRIVATE
+        SDL3::SDL3
+        SDL3_ttf::SDL3_ttf
+        SDL3_image::SDL3_image
+        BattleSimulatorCore
+    )
+endif()
