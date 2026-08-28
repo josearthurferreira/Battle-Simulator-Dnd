@@ -1,6 +1,7 @@
 #ifndef INCLUDE_GAME_H_
 #define INCLUDE_GAME_H_
 
+#include "scene.h"
 #include <bitset>
 
 enum {
@@ -32,6 +33,7 @@ public:
   void render();
 
 private:
+  Scene *currentScene;
 };
 
 #endif // INCLUDE_GAME_H_

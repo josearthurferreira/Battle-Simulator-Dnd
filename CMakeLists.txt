@@ -31,6 +31,8 @@ add_library(BattleSimulatorCore
     src/core.cpp
     src/sprite.cpp
     src/objects.cpp
+    src/scene.cpp
+    src/titlescreen.cpp
 )
 
 target_link_libraries(BattleSimulatorCore PRIVATE
