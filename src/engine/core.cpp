@@ -1,16 +1,12 @@
 #include "game.h"
-#include "objects.h"
 #include "platform.h"
 #include "titlescreen.h"
 
 Game *gGame;
-Object *obj = nullptr;
-
-int i = 0;
 
 Game::Game() { currentScene = new TitleScreen(); }
 
-Game::~Game() { delete obj; }
+Game::~Game() { delete currentScene; }
 
 void Game::update(void) { currentScene->update(); }
 
