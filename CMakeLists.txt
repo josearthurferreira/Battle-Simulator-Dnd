@@ -33,6 +33,7 @@ add_library(BattleSimulatorCore
     src/engine/objects.cpp
     src/engine/scene.cpp
     src/titlescreen.cpp
+    src/battlescene.cpp
 )
 
 target_link_libraries(BattleSimulatorCore PRIVATE

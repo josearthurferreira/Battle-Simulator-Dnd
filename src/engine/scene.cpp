@@ -27,3 +27,5 @@ unsigned Scene::createObj(const char *path, float w, float h) {
   nObjs++;
   return nObjs - 1;
 }
+
+void Scene::deleteObj(unsigned id) { objs.erase(objs.begin() + id); }

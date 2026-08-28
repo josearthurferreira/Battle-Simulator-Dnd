@@ -8,11 +8,12 @@
 class Scene {
 public:
   Scene();
-  ~Scene();
+  virtual ~Scene();
   virtual void update();
   virtual void render();
 
   unsigned createObj(const char *path, float w, float h);
+  void deleteObj(unsigned id);
 
 protected:
   std::vector<std::unique_ptr<Object>> objs;

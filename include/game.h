@@ -32,7 +32,12 @@ public:
   void update();
   void render();
 
+  void changeScene(Scene *newScene);
+  bool onTransition(void);
+  void finishTransition(void);
+
 private:
+  bool transition;
   Scene *currentScene;
 };
 

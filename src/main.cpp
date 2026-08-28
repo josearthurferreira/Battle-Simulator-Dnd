@@ -1,4 +1,3 @@
-#include "battle.h"
 #include "components.h"
 #include "loader.h"
 #include <entt/entt.hpp>
@@ -45,9 +44,14 @@ int main() {
     uint64_t frame_start = platform_get_ticks();
     platform_poll_events();
     gGame->update();
+    if (gGame->onTransition()) {
+      gGame->finishTransition();
+      goto frameend;
+    }
     platform_begin_frame();
     gGame->render();
     platform_end_frame();
+  frameend:
     gGame->prevKeyState = gGame->keyState;
 
     uint64_t dt = platform_get_ticks() - frame_start;
