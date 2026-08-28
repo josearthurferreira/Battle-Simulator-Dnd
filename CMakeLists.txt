@@ -28,10 +28,10 @@ add_library(BattleSimulatorCore
     src/main.cpp
     src/battle_entity.cpp
     src/loader.cpp
-    src/core.cpp
-    src/sprite.cpp
-    src/objects.cpp
-    src/scene.cpp
+    src/engine/core.cpp
+    src/engine/sprite.cpp
+    src/engine/objects.cpp
+    src/engine/scene.cpp
     src/titlescreen.cpp
 )
 
