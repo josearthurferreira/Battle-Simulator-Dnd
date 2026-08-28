@@ -1,6 +1,8 @@
 #ifndef INCLUDE_TYPES_H
 #define INCLUDE_TYPES_H
 
+#include <cstdint>
+
 typedef struct {
   int x;
   int y;

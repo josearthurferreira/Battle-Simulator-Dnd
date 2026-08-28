@@ -194,3 +194,5 @@ void platform_render_sprite(void *data, Vec2f size, Vec2f pos, bool hFlip,
 void platform_destroy_img(void *data) {
   SDL_DestroyTexture((SDL_Texture *)data);
 }
+
+uint64_t platform_get_ticks(void) { return SDL_GetTicks(); }

@@ -18,6 +18,8 @@ void render_text(int x, int y, const char *text, float size);
 void platform_render_sprite(void *data, Vec2f size, Vec2f pos, bool hFLip,
                             bool vFlip, float rot_angle, unsigned frameNum);
 
+uint64_t platform_get_ticks(void);
+
 class Game;
 extern Game *gGame;
 
