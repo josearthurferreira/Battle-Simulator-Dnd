@@ -1,8 +1,8 @@
-#include "titlescreen.h"
-#include "battlescene.h"
+#include "scenes/titlescreen.h"
 #include "game.h"
 #include "platform.h"
 #include "scene.h"
+#include "scenes/battle.h"
 
 TitleScreen::TitleScreen() {}
 

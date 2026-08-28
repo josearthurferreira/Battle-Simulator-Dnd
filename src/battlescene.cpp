@@ -1,6 +1,6 @@
-#include "battlescene.h"
 #include "game.h"
 #include "platform.h"
+#include "scenes/battle.h"
 
 extern Game *gGame;
 

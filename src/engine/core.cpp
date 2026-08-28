@@ -1,6 +1,6 @@
 #include "game.h"
 #include "platform.h"
-#include "titlescreen.h"
+#include "scenes/titlescreen.h"
 
 Game *gGame;
 
