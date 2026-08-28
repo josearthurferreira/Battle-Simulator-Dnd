@@ -10,6 +10,6 @@ Sprite::Sprite(const char *path, float frame_w, float frame_y)
 
 Sprite::~Sprite(void) { platform_destroy_img(data); }
 
-void Sprite::render(Vec2f pos) {
-  platform_render_sprite(data, {w, h}, pos, hFlip, vFlip, rotate);
+void Sprite::render(Vec2f pos, unsigned frameNum) {
+  platform_render_sprite(data, {w, h}, pos, hFlip, vFlip, rotate, frameNum);
 }

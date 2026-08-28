@@ -174,10 +174,10 @@ void *platform_load_img(const char *path) {
 }
 
 void platform_render_sprite(void *data, Vec2f size, Vec2f pos, bool hFlip,
-                            bool vFlip, float rot_angle) {
+                            bool vFlip, float rot_angle, unsigned frameNum) {
   SDL_Texture *texture = (SDL_Texture *)data;
 
-  SDL_FRect src = {0, 0, size.x, size.y};
+  SDL_FRect src = {frameNum * size.x, 0, size.x, size.y};
   SDL_FRect dest = {pos.x, pos.y, 5 * size.x, 5 * size.y};
 
   SDL_FlipMode flip = SDL_FLIP_NONE;

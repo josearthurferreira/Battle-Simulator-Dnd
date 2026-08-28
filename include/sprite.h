@@ -9,7 +9,7 @@ public:
   Sprite(const char *path, float frame_w, float frame_h);
   ~Sprite();
   void update(void);
-  void render(Vec2f pos);
+  void render(Vec2f pos, unsigned frameNum);
 
   friend class Object;
 

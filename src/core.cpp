@@ -10,6 +10,7 @@ int i = 0;
 Game::Game() {
   obj = new Object("../assets/character.png", 16, 32);
   obj->pos = {100, 100};
+  obj->frameNum = 0;
 }
 
 Game::~Game() {}
@@ -17,22 +18,22 @@ Game::~Game() {}
 void Game::update(void) {
   if (keyHeld().test(KEY_UP)) {
     obj->pos.y -= 0.2;
-  }
-  if (keyHeld().test(KEY_DOWN)) {
+    obj->frameNum = 1;
+  } else if (keyHeld().test(KEY_DOWN)) {
     obj->pos.y += 0.2;
-  }
-  if (keyHeld().test(KEY_LEFT)) {
+    obj->frameNum = 0;
+  } else if (keyHeld().test(KEY_LEFT)) {
     obj->pos.x -= 0.2;
-  }
-  if (keyHeld().test(KEY_RIGHT)) {
+    obj->frameNum = 2;
+    if (obj->hFliped())
+      obj->hFlip();
+  } else if (keyHeld().test(KEY_RIGHT)) {
     obj->pos.x += 0.2;
+    obj->frameNum = 2;
+    if (!obj->hFliped())
+      obj->hFlip();
   }
-  if (keyPressed().test(KEY_START)) {
-    obj->hFlip();
-  }
-  if (keyPressed().test(KEY_SELECT)) {
-    obj->vFlip();
-  }
+
   obj->update();
 }
 

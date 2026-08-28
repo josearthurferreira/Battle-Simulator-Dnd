@@ -14,10 +14,14 @@ public:
 
   void hFlip();
   void vFlip();
+  bool hFliped();
+  bool vFliped();
   void rotate(float angle);
 
   void update();
   void render();
+
+  unsigned frameNum;
 
 private:
   Sprite *spr;
