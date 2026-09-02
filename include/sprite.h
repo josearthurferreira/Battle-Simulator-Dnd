@@ -14,6 +14,7 @@ public:
 private:
   void *data;
   float w, h;
+  unsigned nColumns;
 };
 
 #endif // INCLUDE_SPRITE_H_

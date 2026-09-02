@@ -16,9 +16,12 @@ void platform_destroy_img(void *data);
 void draw_square(int x, int y, int w, int h);
 void render_text(int x, int y, const char *text, float size);
 void platform_render_sprite(void *data, Vec2f size, Vec2f pos, bool hFLip,
-                            bool vFlip, float rot_angle, unsigned frameNum);
+                            bool vFlip, float rot_angle, unsigned frameNum,
+                            unsigned nColumns);
 
 uint64_t platform_get_ticks(void);
+
+Vec2f platform_get_img_size(void *data);
 
 class Game;
 extern Game *gGame;

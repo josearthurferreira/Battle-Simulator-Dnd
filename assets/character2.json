@@ -1,0 +1,61 @@
+{
+  "sheet": "../assets/character2.png",
+  "height": 50,
+  "width": 48,
+  "animations": {
+    "idle": {
+      "frames": [
+        1
+      ],
+      "frameRate": 0.1,
+      "loop": true
+    },
+    "walk_down": {
+      "frames": [
+        0,
+        1,
+        2,
+        1
+      ],
+      "frameRate": 0.15,
+      "loop": true
+    },
+    "walk_right": {
+      "frames": [
+        6,
+        7,
+        8,
+        7
+      ],
+      "frameRate": 0.15,
+      "loop": true
+    },
+    "walk_left": {
+      "frames": [
+        6,
+        7,
+        8,
+        7
+      ],
+      "frameRate": 0.15,
+      "loop": true
+    },
+    "dash_right": {
+      "frames": [
+        40,
+        41,
+        42,
+        43
+      ],
+      "frameRate": 0.08,
+      "loop": true
+    },
+    "faint": {
+      "frames": [
+        23
+      ],
+      "frameRate": 0.1,
+      "loop": false
+    }
+  }
+}

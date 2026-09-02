@@ -1,0 +1,40 @@
+{
+  "sheet": "../assets/character.png",
+  "width": 16,
+  "height": 32,
+  "animations": {
+    "idle": {
+      "frames": [
+        0
+      ]
+    },
+    "walk_up": {
+      "frames": [
+        5,
+        1,
+        6
+      ]
+    },
+    "walk_right": {
+      "frames": [
+        7,
+        2,
+        8
+      ]
+    },
+    "walk_left": {
+      "frames": [
+        7,
+        2,
+        8
+      ]
+    },
+    "walk_down": {
+      "frames": [
+        3,
+        0,
+        4
+      ]
+    }
+  }
+}

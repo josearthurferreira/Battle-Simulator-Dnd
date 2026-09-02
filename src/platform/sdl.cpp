@@ -167,17 +167,20 @@ void *platform_load_img(const char *path) {
   }
   assert(texture);
   SDL_DestroySurface(surf);
-  float tex_w, tex_h;
-  SDL_GetTextureSize(texture, &tex_w, &tex_h);
-  printf("%f x %f\n", tex_w, tex_h);
+  SDL_SetTextureScaleMode(texture, SDL_SCALEMODE_NEAREST);
+
   return texture;
 }
 
 void platform_render_sprite(void *data, Vec2f size, Vec2f pos, bool hFlip,
-                            bool vFlip, float rot_angle, unsigned frameNum) {
+                            bool vFlip, float rot_angle, unsigned frameNum,
+                            unsigned columns) {
   SDL_Texture *texture = (SDL_Texture *)data;
 
-  SDL_FRect src = {frameNum * size.x, 0, size.x, size.y};
+  float srcX = (frameNum % columns) * size.x;
+  float srcY = (frameNum / columns) * size.y;
+
+  SDL_FRect src = {srcX, srcY, size.x, size.y};
   SDL_FRect dest = {pos.x, pos.y, 5 * size.x, 5 * size.y};
 
   SDL_FlipMode flip = SDL_FLIP_NONE;
@@ -196,3 +199,12 @@ void platform_destroy_img(void *data) {
 }
 
 uint64_t platform_get_ticks(void) { return SDL_GetTicks(); }
+
+Vec2f platform_get_img_size(void *data) {
+  SDL_Texture *texture = (SDL_Texture *)data;
+  float w = 0, h = 0;
+  if (texture) {
+    SDL_GetTextureSize(texture, &w, &h);
+  }
+  return {w, h};
+}
