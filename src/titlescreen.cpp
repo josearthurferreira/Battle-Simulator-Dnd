@@ -1,7 +1,6 @@
 #include "scenes/titlescreen.h"
 #include "game.h"
 #include "platform.h"
-#include "scene.h"
 #include "scenes/battle.h"
 
 TitleScreen::TitleScreen() {}
@@ -11,11 +10,8 @@ void TitleScreen::update() {
     gGame->changeScene(new BattleScene());
     return;
   }
-  Scene::update();
 }
 
 void TitleScreen::render() {
   render_text(120, 75, "SIMULADOR DE COMBATE", 64.0f);
-
-  Scene::render();
 }

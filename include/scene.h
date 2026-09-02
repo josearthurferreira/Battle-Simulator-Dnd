@@ -1,23 +1,17 @@
 #ifndef INCLUDE_SCENE_H
 #define INCLUDE_SCENE_H
 
-#include "objects.h"
-#include <memory>
-#include <vector>
+#include "entt/entt.hpp"
 
 class Scene {
 public:
   Scene();
   virtual ~Scene();
-  virtual void update();
-  virtual void render();
-
-  unsigned createObj(const char *path, float w, float h);
-  void deleteObj(unsigned id);
+  virtual void update() = 0;
+  virtual void render() = 0;
 
 protected:
-  std::vector<std::unique_ptr<Object>> objs;
-  unsigned nObjs;
+  entt::registry registry;
 };
 
 #endif

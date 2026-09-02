@@ -30,7 +30,7 @@ add_library(BattleSimulatorCore
     src/loader.cpp
     src/engine/core.cpp
     src/engine/sprite.cpp
-    src/engine/objects.cpp
+    src/systems.cpp
     src/engine/scene.cpp
     src/titlescreen.cpp
     src/battlescene.cpp
@@ -71,6 +71,7 @@ if(BUILD_PLATFORM_SDL)
         SDL3::SDL3
         SDL3_ttf::SDL3_ttf
         SDL3_image::SDL3_image
+        EnTT::EnTT
         BattleSimulatorCore
     )
 endif()

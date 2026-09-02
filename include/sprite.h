@@ -8,16 +8,12 @@ public:
   Sprite();
   Sprite(const char *path, float frame_w, float frame_h);
   ~Sprite();
-  void update(void);
-  void render(Vec2f pos, unsigned frameNum);
 
-  friend class Object;
+  void render(Vec2f pos, RenderOptions *options);
 
 private:
   void *data;
   float w, h;
-  bool hFlip, vFlip;
-  float rotate;
 };
 
 #endif // INCLUDE_SPRITE_H_

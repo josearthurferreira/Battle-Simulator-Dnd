@@ -25,4 +25,12 @@ typedef struct {
   float z;
 } Vec3f;
 
+struct RenderOptions {
+  bool hFlip;
+  bool vFlip;
+  float angle;
+  unsigned frameNum;
+  unsigned frameRow;
+};
+
 #endif // !INCLUDE_TYPES_H
