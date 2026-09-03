@@ -150,7 +150,7 @@ entt::entity LoadAnimator(entt::registry &registry, const char *fpath) {
   for (auto &[clipName, clipData] : animData["animations"].items()) {
     AnimationClip clip;
     clip.frames = clipData["frames"].get<std::vector<unsigned>>();
-    clip.frameRate = clipData.value("frameRate", 1.1f);
+    clip.frameRate = clipData.value("frameRate", 0.5f);
 
     anim.anims[clipName] = clip;
   }

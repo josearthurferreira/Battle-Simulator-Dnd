@@ -40,22 +40,26 @@ int main() {
   uint64_t init_ticks = platform_get_ticks();
   printf("Plataforma inicializada em %lu ticks\n", init_ticks);
 
+  uint64_t last_time = init_ticks;
   while (gGame->active) {
-    uint64_t frame_start = platform_get_ticks();
+    uint64_t current_time = platform_get_ticks();
+    uint64_t dt = current_time - last_time;
+    last_time = current_time;
+
     platform_poll_events();
-    gGame->update();
+    gGame->update(dt);
+
     if (gGame->onTransition()) {
       gGame->finishTransition();
       goto frameend;
     }
+
     platform_begin_frame();
     gGame->render();
     platform_end_frame();
+
   frameend:
     gGame->prevKeyState = gGame->keyState;
-
-    uint64_t dt = platform_get_ticks() - frame_start;
-    printf("tempo de frame: %lu\n", dt);
   }
 
   delete gGame;

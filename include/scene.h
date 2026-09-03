@@ -7,7 +7,7 @@ class Scene {
 public:
   Scene();
   virtual ~Scene();
-  virtual void update() = 0;
+  virtual void update(float dt) = 0;
   virtual void render() = 0;
 
 protected:

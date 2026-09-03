@@ -14,11 +14,11 @@ struct AnimatorComponent {
   float timer;
 
   void play(std::string anim_name);
-  void update();
+  void update(float dt);
 };
 
 entt::entity createAnimator(const char *fpath);
 
 namespace AnimationSystem {
-void Update(entt::registry &registry);
+void Update(entt::registry &registry, float dt);
 }

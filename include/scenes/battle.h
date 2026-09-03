@@ -7,7 +7,7 @@ class BattleScene : public Scene {
 public:
   BattleScene();
 
-  void update() override;
+  void update(float dt) override;
   void render() override;
 
 private:

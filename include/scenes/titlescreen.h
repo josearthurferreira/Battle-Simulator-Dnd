@@ -7,7 +7,7 @@ class TitleScreen : public Scene {
 public:
   TitleScreen();
 
-  void update() override;
+  void update(float dt) override;
   void render() override;
 
 private:

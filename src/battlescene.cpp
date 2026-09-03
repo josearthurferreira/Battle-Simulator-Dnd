@@ -8,10 +8,10 @@
 extern Game *gGame;
 
 BattleScene::BattleScene() {
-  entt::entity player = LoadAnimator(registry, "../assets/character.json");
-  registry.emplace<PlayerTag>(player);
-  registry.emplace<Pos3Component>(player, 100.0f, 100.0f, 100.0f);
-  registry.emplace<Speed3Component>(player, 0.0f, 0.0f, 0.0f);
+  /* entt::entity player = LoadAnimator(registry, "../assets/character.json");
+   registry.emplace<PlayerTag>(player);
+   registry.emplace<Pos3Component>(player, 100.0f, 100.0f, 100.0f);
+   registry.emplace<Speed3Component>(player, 0.0f, 0.0f, 0.0f);*/
 
   entt::entity player2 = LoadAnimator(registry, "../assets/character2.json");
   registry.emplace<PlayerTag>(player2);
@@ -19,10 +19,10 @@ BattleScene::BattleScene() {
   registry.emplace<Speed3Component>(player2, 0.0f, 0.0f, 0.0f);
 }
 
-void BattleScene::update() {
+void BattleScene::update(float dt) {
   MovementSystem::PlayerInputUpdate(registry);
-  MovementSystem::Update(registry);
-  AnimationSystem::Update(registry);
+  MovementSystem::Update(registry, dt);
+  AnimationSystem::Update(registry, dt);
 }
 
 void BattleScene::render() {

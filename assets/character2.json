@@ -1,6 +1,6 @@
 {
   "sheet": "../assets/character2.png",
-  "height": 50,
+  "height": 48,
   "width": 48,
   "animations": {
     "idle": {
@@ -9,6 +9,14 @@
       ],
       "frameRate": 0.1,
       "loop": true
+    },
+    "walk_up": {
+      "frames": [
+        3,
+        4,
+        5,
+        4
+      ]
     },
     "walk_down": {
       "frames": [
@@ -40,22 +48,12 @@
       "frameRate": 0.15,
       "loop": true
     },
-    "dash_right": {
+    "cast": {
       "frames": [
-        40,
-        41,
-        42,
-        43
+        16,
+        17
       ],
-      "frameRate": 0.08,
-      "loop": true
-    },
-    "faint": {
-      "frames": [
-        23
-      ],
-      "frameRate": 0.1,
-      "loop": false
+      "frameRate": 0.1
     }
   }
 }

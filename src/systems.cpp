@@ -2,14 +2,13 @@
 #include "components.h"
 #include "game.h"
 #include "platform.h"
-#include <iostream>
 
-void MovementSystem::Update(entt ::registry &registry) {
+void MovementSystem::Update(entt ::registry &registry, float dt) {
   auto view = registry.view<Pos3Component, Speed3Component>();
 
   for (auto [entity, pos, spd] : view.each()) {
-    pos.x += spd.x;
-    pos.y += spd.y;
+    pos.x += spd.x * dt;
+    pos.y += spd.y * dt;
   }
 }
 
@@ -38,7 +37,7 @@ void MovementSystem::PlayerInputUpdate(entt::registry &registry) {
       p_spr.opts.hFlip = true;
     } else {
       spd.x = spd.y = 0;
-      anim.play("idle");
+      anim.play("cast");
     }
   }
 }
@@ -50,14 +49,12 @@ void RenderSystem::RenderSprites(entt::registry &registry) {
   }
 }
 
-void AnimationSystem::Update(entt::registry &registry) {
+void AnimationSystem::Update(entt::registry &registry, float dt) {
   auto view = registry.view<SpriteComponent, AnimatorComponent>();
   for (auto &&[entity, spr, anim] : view.each()) {
     if (!anim.currentAnimName.empty()) {
       auto &currentAnim = anim.anims[anim.currentAnimName];
-      std::cout << anim.currentAnimName << " " << currentAnim.currentFrame
-                << std::endl;
-      anim.update();
+      anim.update(dt);
       spr.opts.frameNum = currentAnim.frames[currentAnim.currentFrame];
     }
   }

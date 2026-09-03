@@ -5,7 +5,7 @@
 
 TitleScreen::TitleScreen() {}
 
-void TitleScreen::update() {
+void TitleScreen::update(float dt) {
   if (gGame->keyPressed().test(KEY_START)) {
     gGame->changeScene(new BattleScene());
     return;

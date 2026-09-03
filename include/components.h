@@ -89,7 +89,7 @@ struct PlayerTag {};
 
 namespace MovementSystem {
 void PlayerInputUpdate(entt::registry &registry);
-void Update(entt ::registry &registry);
+void Update(entt ::registry &registry, float dt);
 }; // namespace MovementSystem
 
 namespace RenderSystem {

@@ -1,17 +1,18 @@
 #include "animation.h"
 
-void AnimatorComponent::update(void) {
-  timer += 0.1;
-  while (timer >= anims[currentAnimName].frameRate) {
-    anims[currentAnimName].currentFrame++;
-    timer -= anims[currentAnimName].frameRate;
+void AnimatorComponent::update(float dt) {
+  timer += dt;
+  auto &anim = anims[currentAnimName];
+  while (timer >= anim.frameRate) {
+    anim.currentFrame++;
+    timer -= anim.frameRate;
   }
 
-  if (anims[currentAnimName].currentFrame ==
-      anims[currentAnimName].frames.size()) {
-    anims[currentAnimName].currentFrame = 0;
+  if (anim.currentFrame >= anim.frames.size()) {
+    anim.currentFrame = anim.currentFrame % anim.frames.size();
   }
 }
+
 void AnimatorComponent::play(std::string anim_name) {
   if (currentAnimName == anim_name) {
     return;

@@ -8,7 +8,7 @@ Game::Game() { currentScene = new TitleScreen(); }
 
 Game::~Game() { delete currentScene; }
 
-void Game::update(void) { currentScene->update(); }
+void Game::update(float dt) { currentScene->update(dt); }
 
 void Game::render(void) { currentScene->render(); }
 

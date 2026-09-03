@@ -29,7 +29,7 @@ public:
   ~Game();
   bool active;
 
-  void update();
+  void update(float dt);
   void render();
 
   void changeScene(Scene *newScene);
