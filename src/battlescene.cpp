@@ -13,7 +13,7 @@ BattleScene::BattleScene() {
    registry.emplace<Pos3Component>(player, 100.0f, 100.0f, 100.0f);
    registry.emplace<Speed3Component>(player, 0.0f, 0.0f, 0.0f);*/
 
-  entt::entity player2 = LoadAnimator(registry, "../assets/character2.json");
+  entt::entity player2 = LoadAnimator(registry, "../assets/character3t.json");
   registry.emplace<PlayerTag>(player2);
   registry.emplace<Pos3Component>(player2, 200.0f, 200.0f, 100.0f);
   registry.emplace<Speed3Component>(player2, 0.0f, 0.0f, 0.0f);

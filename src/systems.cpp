@@ -28,16 +28,22 @@ void MovementSystem::PlayerInputUpdate(entt::registry &registry) {
     } else if (gGame->keyHeld().test(KEY_LEFT)) {
       spd.x = -0.2;
       spd.y = 0.0;
-      anim.play("walk_left");
+      anim.play("walk_side");
       p_spr.opts.hFlip = false;
     } else if (gGame->keyHeld().test(KEY_RIGHT)) {
       spd.x = 0.2;
       spd.y = 0.0;
-      anim.play("walk_right");
+      anim.play("walk_side");
       p_spr.opts.hFlip = true;
     } else {
+      if (spd.y < 0.0) {
+        anim.play("idle_up");
+      } else if (spd.y > 0.0) {
+        anim.play("idle_down");
+      } else if (spd.x != 0.0) {
+        anim.play("idle_side");
+      }
       spd.x = spd.y = 0;
-      anim.play("cast");
     }
   }
 }

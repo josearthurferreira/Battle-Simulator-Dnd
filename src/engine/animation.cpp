@@ -2,6 +2,9 @@
 
 void AnimatorComponent::update(float dt) {
   timer += dt;
+  if (currentAnimName.empty()) {
+    return;
+  }
   auto &anim = anims[currentAnimName];
   while (timer >= anim.frameRate) {
     anim.currentFrame++;
@@ -14,10 +17,15 @@ void AnimatorComponent::update(float dt) {
 }
 
 void AnimatorComponent::play(std::string anim_name) {
-  if (currentAnimName == anim_name) {
+  if (currentAnimName == anim_name || !anims.contains(anim_name)) {
     return;
   }
   currentAnimName = anim_name;
   anims[currentAnimName].currentFrame = 0;
+  timer = 0.0f;
+}
+
+void AnimatorComponent::stop() {
+  currentAnimName = "";
   timer = 0.0f;
 }

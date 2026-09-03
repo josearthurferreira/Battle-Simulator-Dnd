@@ -30,7 +30,6 @@ struct RenderOptions {
   bool vFlip;
   float angle;
   unsigned frameNum;
-  unsigned frameRow;
 };
 
 #endif // !INCLUDE_TYPES_H

@@ -15,6 +15,7 @@ struct AnimatorComponent {
 
   void play(std::string anim_name);
   void update(float dt);
+  void stop();
 };
 
 entt::entity createAnimator(const char *fpath);

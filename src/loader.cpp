@@ -140,19 +140,44 @@ entt::entity LoadAnimator(entt::registry &registry, const char *fpath) {
   json animData = json::parse(fstr);
 
   entt::entity e = registry.create();
-  std::shared_ptr<Sprite> spr = std::make_shared<Sprite>(
-      animData["sheet"].get<std::string>().c_str(),
-      animData["width"].get<float>(), animData["height"].get<float>());
-  RenderOptions opts = {false, false, 0, 0, 0};
+
+  const auto &meta = animData["meta"];
+  std::string imagePath = "../assets/" + meta["image"].get<std::string>();
+  float width = 0.0f;
+  float height = 0.0f;
+
+  if (!animData["frames"].empty()) {
+    width = animData["frames"][0]["sourceSize"]["w"].get<float>();
+    height = animData["frames"][0]["sourceSize"]["h"].get<float>();
+  }
+
+  std::shared_ptr<Sprite> spr =
+      std::make_shared<Sprite>(imagePath.c_str(), width, height);
+  RenderOptions opts = {false, false, 0, 0};
   registry.emplace<SpriteComponent>(e, spr, opts);
+
   auto &anim = registry.emplace<AnimatorComponent>(e);
 
-  for (auto &[clipName, clipData] : animData["animations"].items()) {
-    AnimationClip clip;
-    clip.frames = clipData["frames"].get<std::vector<unsigned>>();
-    clip.frameRate = clipData.value("frameRate", 0.5f);
+  if (meta.contains("frameTags")) {
+    for (const auto &tag : meta["frameTags"]) {
+      std::string clipName = tag["name"].get<std::string>();
+      unsigned int from = tag["from"].get<unsigned int>();
+      unsigned int to = tag["to"].get<unsigned int>();
 
-    anim.anims[clipName] = clip;
+      AnimationClip clip;
+      for (unsigned int i = from; i <= to; i++) {
+        clip.frames.push_back(i);
+      }
+
+      if (!animData["frames"].empty() && from < animData["frames"].size()) {
+        float durationMs = animData["frames"][from]["duration"].get<float>();
+        clip.frameRate = durationMs / 1000.0f;
+      } else {
+        clip.frameRate = 0.1f;
+      }
+
+      anim.anims[clipName] = clip;
+    }
   }
 
   return e;
