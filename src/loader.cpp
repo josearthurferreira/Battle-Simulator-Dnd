@@ -152,7 +152,7 @@ entt::entity LoadAnimator(entt::registry &registry, const char *fpath) {
   }
 
   std::shared_ptr<Sprite> spr =
-      std::make_shared<Sprite>(imagePath.c_str(), width, height);
+      SpriteManager::createSprite(imagePath.c_str(), width, height);
   RenderOptions opts = {false, false, 0, 0};
   registry.emplace<SpriteComponent>(e, spr, opts);
 

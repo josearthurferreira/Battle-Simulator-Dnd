@@ -2,6 +2,7 @@
 #define INCLUDE_TYPES_H
 
 #include <cstdint>
+#include <memory>
 
 typedef struct {
   int x;

@@ -17,4 +17,9 @@ private:
   unsigned nColumns;
 };
 
+namespace SpriteManager {
+std::shared_ptr<Sprite> createSprite(const char *path, float frame_w,
+                                     float frame_h);
+}
+
 #endif // INCLUDE_SPRITE_H_
